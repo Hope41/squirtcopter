@@ -1,0 +1,3377 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset = utf-8>
+        <meta name = viewport content = 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+        <title>SQUIRTCOPTER</title>
+        <style>
+            @font-face {
+                font-family: font;
+                src: url(data:application/octet-stream;base64,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)
+            }
+
+            @font-face {
+                font-family: startFont;
+                src: url(data:application/octet-stream;base64,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)
+            }
+
+            body {
+                background: #fff;
+                margin: 0;
+                overflow: hidden;
+                user-select: none;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none
+            }
+
+            canvas {
+                width: 100%;
+                height: 100%
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id = cvs></canvas>
+
+        <script>
+            const CEILING = -7
+            const GROUND = 3
+            const CURRENCY = 'c'
+            const MAXPHASES = 2 // amount of bot types
+
+            function triangle(x) {
+                return 2 * Math.abs((((x - .5) % 2) + 2) % 2 - 1) - 1
+            }
+
+            function quad(x) {
+                return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2
+            }
+
+            function lerp(a, b, x) {
+                return a + x * (b - a)
+            }
+
+            function collide(a, b) {
+                return (
+                    a.x < b.x + b.w &&
+                    a.x + a.w > b.x &&
+                    a.y < b.y + b.h &&
+                    a.y + a.h > b.y)
+            }
+
+            function offScreen(a, multiply = 1) {
+                const b = real(a.x, a.y)
+                const w = a.w * game.scale
+                const h = a.h * game.scale
+                const gapX = cvs.width * (multiply - 1)
+                const gapY = cvs.height * (multiply - 1)
+                return (
+                    b.x + w < -gapX ||
+                    b.x > cvs.width + gapX ||
+                    b.y + h < -gapY ||
+                    b.y > cvs.height + gapY)
+            }
+
+            function real(x, y) {
+                x = (x - cam.x) * game.scale + cvs.width / 2
+                y = (y - cam.y) * game.scale + cvs.height / 2
+                return {x, y}
+            }
+
+            function fake(x, y) {
+                x = (x - cvs.width / 2) / game.scale + cam.x,
+                y = (y - cvs.height / 2) / game.scale + cam.y
+                return {x, y}
+            }
+
+            function rot(x, y, w, h, X, Y, a = 0) {
+                const r = real(
+                    x + Math.cos(a) * X,
+                    y + Math.sin(a) * Y)
+                const goal = {
+                    x: r.x + Math.cos(a) * w * game.scale,
+                    y: r.y + Math.sin(a) * w * game.scale
+                }
+
+                ctx.lineWidth = h * game.scale
+
+                ctx.beginPath()
+                ctx.moveTo(r.x, r.y)
+                ctx.lineTo(goal.x, goal.y)
+                ctx.stroke()
+
+                return fake(goal.x, goal.y)
+            }
+
+            function rotAroundAhr(x, y, X, Y, ang) {
+                const cos = Math.cos(-ang)
+                const sin = Math.sin(-ang)
+                const distX = x - X
+                const distY = y - Y
+
+                const newX = (cos * distX) + (sin * distY) + X
+                const newY = (cos * distY) - (sin * distX) + Y
+
+                return {x: newX, y: newY}
+            }
+
+            function rotAhr(x, y, w, h, X, Y, a = 0) {
+                const pos = rotAroundAhr(x, y, X, Y, a)
+                const r = real(pos.x, pos.y)
+
+                const goal = {
+                    x: r.x + Math.cos(a) * w * game.scale,
+                    y: r.y + Math.sin(a) * w * game.scale
+                }
+
+                ctx.lineWidth = h * game.scale
+
+                ctx.beginPath()
+                ctx.moveTo(r.x, r.y)
+                ctx.lineTo(goal.x, goal.y)
+                ctx.stroke()
+
+                return fake(goal.x, goal.y)
+            }
+
+            function fillText(text, x, y) {
+                const r = real(x, y)
+                ctx.fillText(text, r.x, r.y)
+            }
+
+            function fillRect(x, y, w, h) {
+                const r = real(x, y)
+                ctx.fillRect(r.x, r.y, w * game.scale, h * game.scale)
+            }
+
+            function rndDec(seed) {
+                const whole = 2038074743
+                seed *= 15485863
+                return ((seed * seed * seed % whole + whole) % whole) / whole
+            }
+
+            function rnd(min, max, seed) {
+                return min + rndDec(seed) * (max - min)
+            }
+
+            function random(min, max) {
+                return min + Math.random() * (max - min)
+            }
+
+            function randomInt(min, max) {
+                return Math.floor(min + Math.random() * (max - min))
+            }
+
+            function rgb(r, g, b, a = 1) {
+                return 'rgb('+r*255+','+g*255+','+b*255+','+a+')'
+            }
+
+            const drawText = (T, X, Y, C = '#fff', B = '#321') => {
+                const oft = .03 * game.scale
+
+                ctx.fillStyle = B
+                ctx.fillText(T, X + oft, Y + oft)
+
+                ctx.fillStyle = C
+                ctx.fillText(T, X, Y)
+            }
+
+
+            class Bot {
+                constructor(x, y, type = 'auto', func = bot => {}, phase = 'auto') {
+                    this.x = x
+                    this.y = y
+                    this.w = 1
+                    this.h = 1
+                    this.w2 = 1
+                    this.h2 = 1
+
+                    this.freeze = [.7, .8, .9]
+                    this.norm = [.2, .2, .2]
+
+                    this.c = this.norm
+                    this.l = [.2, .5, .7]
+
+                    this.velChangeTime = 0
+                    this.velChangeAmt = 0
+                    this.velAttract = 0
+                    this.velChange = 0
+                    this.swingVel = 0
+                    this.swingOft = 0
+                    this.armLen = 0
+                    this.vDirX = 0
+                    this.vDirY = 0
+                    this.value = 0
+                    this.life = 0
+                    this.vx = 0
+                    this.vy = 0
+
+                    this.baseX = this.x
+                    this.baseY = this.y
+
+                    this.frozen = 0
+                    this.smoothFrozen = 0
+
+                    this.joins = [
+                        (pos, dt, O) => this.pole(pos, dt, O),
+                        (pos, dt, O) => this.arm(pos, dt, O),
+                        (pos, dt, O) => this.gear(pos, dt, O)
+                    ]
+                    this.ends = [
+                        (pos, dt, O) => this.drill(pos, dt, O),
+                        (pos, dt, O) => this.claw(pos, dt, O),
+                        (pos, dt, O) => this.gear(pos, dt, O),
+                        (pos, dt, O) => this.gun(pos, dt, O),
+                        (pos, dt, O) => this.gun(pos, dt, O),
+                    ]
+
+                    this.upg = []
+                    this.toAngle = 0
+                    this.time = random(0, 10)
+
+                    this.noz = 0
+                    this.gunRegen = 20
+                    this.gunShoot = this.gunRegen
+
+                    this.random = rnd(0, 1, this.x * this.x * 99)
+
+                    this.spawnFreq = 100
+                    this.spawnTime = this.spawnFreq
+                    this.spawnable = false
+                    this.spawns = 0
+
+                    this.hit = false
+                    this.boss = false
+
+                    this.ray = 0
+                    this.rayStop = false
+
+                    this.phase = phase
+                    this.type = type
+
+                    // RESTICT PHASE
+                    this.eradicate = false
+
+                    this.generate()
+                    func(this)
+
+                    this.life = this.maxLife
+                    this.smoothLife = this.life
+                    this.healthBar = this.life
+                }
+
+                spawnABot() {
+                    game.botRequests.push({x: this.x, y: this.y, type: 0})
+                }
+
+                arm(pos, dt, O) {
+                    const w = this.armLen + rnd(-.5, .3, O * 999 + this.random * 999)
+                    const h = .15
+
+                    const x = this.x + pos.x
+                    const y = this.y + pos.y
+                    ctx.strokeStyle = rgb(.2, .2, .2)
+                    const newPos = rot(x, y, w, h, 0, 0, this.time * this.swingVel)
+                    const newPos2 = rot(newPos.x, newPos.y, w, h, 0, 0, this.time * this.swingVel * this.swingOft)
+
+                    return {x: newPos2.x - this.x, y: newPos2.y - this.y, a: newPos2.ang}
+                }
+
+                pole(pos, dt, O) {
+                    const w = this.armLen / 5
+                    const h = .15
+
+                    const x = this.x + pos.x
+                    const y = this.y + pos.y
+                    let newPos = 0
+                    for (let i = 3; i --;) {
+                        const shrink = 1 + i / 2
+                        const W = w * shrink * (1 + Math.sin(this.time) * .7)
+                        const s = .15 - i / 8
+                        ctx.strokeStyle = rgb(s, s, s)
+                        const new2 = rot(
+                            x, y, W, h / shrink,
+                            0, 0, this.time * this.swingVel + O)
+                        if (i == 2) newPos = new2
+                    }
+
+                    return {x: newPos.x - this.x, y: newPos.y - this.y}
+                }
+
+                gear(pos, dt, O) {
+                    const size = 1
+                    const mid = .3
+                    const spikes = 3
+                    const w = .1
+                    const h = .1
+                    const speed = this.time * 8
+
+                    const x = this.x + pos.x
+                    const y = this.y + pos.y
+
+                    ctx.strokeStyle = rgb(.1, .1, .1)
+                    const newPos = rot(x, y, size, size, -size /  2, -size / 2, speed)
+
+                    for (let i = 0; i < spikes; i ++) {
+                        ctx.strokeStyle = rgb(.15, .15, .15)
+                        const oft = i * (size / spikes)
+                        const gap = (1 / spikes) / 2
+                        rotAhr(x - size / 2, y - size / 2 + oft + gap, -h, w, x, y, speed)
+                        rotAhr(x + size / 2, y - size / 2 + oft + gap, h, w, x, y, speed)
+                        rotAhr(x - size / 2 + oft + gap / 2, y - size / 2 - h / 2, h, w, x, y, speed)
+                        rotAhr(x - size / 2 + oft + gap / 2, y + size / 2 + h / 2, h, w, x, y, speed)
+                    }
+
+                    ctx.strokeStyle = rgb(.25, .25, .25)
+                    rot(x, y, mid, mid, -mid /  2, -mid / 2, speed)
+
+                    game.weapons.push({x: x - size / 2, y: y - size / 2, w: size, h: size, damage: .5})
+
+                    return {x: newPos.x - this.x, y: newPos.y - this.y}
+                }
+
+                claw(pos, dt, O) {
+                    const x = this.x + pos.x
+                    const y = this.y + pos.y
+                    const w = .5
+                    const h = 1
+                    const w2 = .3
+                    const h2 = .7
+                    const dx = (hero.x + hero.w / 2) - x
+                    const dy = (hero.y + hero.h / 2) - y
+                    const angle = Math.atan2(dy, dx)
+
+                    const ang = angle + 1.7 + Math.sin(this.time * 3) * .5
+                    const snap = .4 + quad(.5 + Math.sin(this.time * (6 + this.random * 6)) * .5) * .8
+
+                    ctx.strokeStyle = rgb(.25, .2 + this.random * .05, .09 + this.random * .14)
+                    rotAhr(x, y - h2 / 2, w2, h2, x, y, ang - snap)
+                    ctx.strokeStyle = rgb(.2, .15 + this.random * .05, .04 + this.random * .16)
+                    rotAhr(x, y - h / 2, w, h, x, y, ang)
+
+                    game.weapons.push({x: x - w / 2, y: y - h / 2, w: 1, h: 1, damage: 1})
+                }
+
+                drill(pos, dt, O) {
+                    const x = this.x + pos.x
+                    const y = this.y + pos.y
+                    const w = .5
+                    const h = 1
+                    const a = this.toAngle + 1.4
+
+                    ctx.strokeStyle = rgb(0, 0, 0)
+                    rotAhr(x - .05, y - .3, .1, .6, x, y, a)
+
+                    for (let i = 0; i < 5; i ++) {
+                        let s = Math.sin(i / 3 + this.time * 10) - .75
+                        if (s < 0) s = 0
+                        ctx.strokeStyle = rgb(.1 + s, .1 + s, .1 + s)
+                        const w = .6 + i / 15
+                        rotAhr(
+                            x - w / 2,
+                            y - i * .15 + Math.sin(this.time * 5 + i / 5) * .1 - .1,
+                            w, .13, x, y, a + rnd(0, .1, this.time + i))
+                    }
+
+                    game.weapons.push({x: x - w, y: y - h / 2, w: 1, h: 1, damage: .5})
+                }
+
+                gun(pos, dt, O) {
+                    const thick = .3
+                    const len = .7
+                    const size = .2
+
+                    const x = this.x + pos.x
+                    const y = this.y + pos.y
+                    ctx.strokeStyle = rgb(.2, .2, .2)
+                    rotAhr(x, y - len / 2, thick, len, x, y, this.toAngle + 1.4)
+                    ctx.strokeStyle = rgb(.3, .3, .3)
+                    this.noz = rotAhr(x + thick / 2 - size / 2, y - len - size / 4, size, size / 2, x, y, this.toAngle + 1.4)
+
+                    this.gunShoot -= dt
+                }
+
+                createProx(type) {
+                    // Amount of proximities
+                    let prox = 1 + Math.floor(type / 10)
+                    if (prox > 4) prox = 4
+
+                    // Extend arms
+                    for (let i = 0; i < prox; i ++) {
+                        const arr = [
+                            rnd(this.w * .1, this.w * .9, this.x + i * i),
+                            rnd(this.h * .1, this.h * .9, this.x + i * 99)]
+
+                        if (!this.phase) {
+                            const choice = Math.floor(rnd(0, 4, this.x + i * i * 999))
+                            if (choice == 0) arr[0] = this.w * .1
+                            if (choice == 1) arr[0] = this.w * .9
+                            if (choice == 2) arr[1] = this.h * .1
+                            if (choice == 3) arr[1] = this.h * .9
+                        }
+                        else if (this.phase == 1) {
+                            arr[1] = this.h * rnd(.7, .8, i * i + this.x * 99)
+
+                            const seed = this.x + i * i * 500
+                            const choice = Math.floor(rnd(0, 2, this.x + i * i * 999))
+                            if (choice) arr[0] = this.w * rnd(.1, .2, seed)
+                            else arr[0] = this.w * rnd(.8, .9, seed)
+                        }
+
+                        let segments = 4 + Math.floor(rnd(0, 5, type + type * i * 17) * this.x * .002)
+                        if (segments > 4) segments = 4
+
+                        for (let j = 2; j < segments; j ++) {
+                            if (j < segments - 1) {
+                                let join = type / 3
+                                if (join > this.joins.length - 1) join = this.joins.length - 1
+                                arr.push(this.joins[Math.round(rnd(0, join, this.x + this.x * i * j * 60))])
+                            }
+                            else {
+                                let end = 1 + type / 3
+                                if (end > this.ends.length - 1) end = this.ends.length - 1
+                                arr.push(this.ends[Math.round(rnd(0, end, this.x + this.x * i * j * 99))])
+                            }
+                        }
+
+                        this.upg.push(arr)
+                    }
+                }
+
+                generate() {
+                    // Enemies get worse much more gradually if you haven't destroyed all of them
+                    const MISSX = this.x - hero.misses
+
+                    if (this.phase == 'auto')
+                        this.phase = Math.floor(rnd(0, hero.bossesDestroyed + .5, MISSX + MISSX * 999))
+                    // Type ranges from newest to oldest
+                    if (this.type == 'auto') {
+                        this.type = Math.floor(rnd(0, MISSX / 40, MISSX * MISSX))
+                        this.type -= this.phase * 10
+                        if (this.type < 0) this.type = 0
+                    }
+
+                    this.phase = this.phase % MAXPHASES
+
+                    const size = rnd(.7, 1.2, this.type * this.type + 40)
+                    this.w = size
+                    this.h = size
+
+                    if (this.phase == 1) {
+                        this.w = size * 1.7
+                        this.h = size * .8
+                    }
+
+                    this.w2 = this.w + 2.5
+                    this.h2 = this.h + 2.5
+
+                    // How strong it is
+                    this.maxLife = Math.ceil(this.type / 1.45) + 1 + this.phase * (100 + this.type * 10)
+                    this.value = Math.ceil(this.type * 1.2) + 1 + this.phase * 100
+
+                    let saturation = .2
+                    if (this.phase == 1) saturation = .05
+                    this.c = [
+                        .2 + rndDec(this.type+2)*saturation,
+                        .2 + rndDec(this.type)*saturation,
+                        .2 + rndDec(this.type+1)*saturation]
+
+                    if (this.type > 0) {
+                        // How fast it moves in a direction
+                        this.velChangeAmt = this.type / (1300 / (this.phase + 1))
+                        if (this.velChangeAmt > .036) this.velChangeAmt = .036
+
+                        // How often it changes direction
+                        let change = 200 - this.type * 10
+                        if (change < 30) change = 30
+                        this.velChangeTime = change + rnd(0, 50, this.type * 45)
+                    }
+
+                    // How fast it moves towards player
+                    if (this.type > 7) {
+                        this.velAttract = (this.type - 7) / 1300
+                        if (this.velAttract > .02) this.velAttract = .02
+                        if (this.phase) this.velAttract = .015
+                    }
+
+                    // How long the arm segments are
+                    this.armLen = 1 + this.type * .001 * rnd(.5, 1, this.type * 37)
+                    if (this.armLen > 1.5) this.armLen = 1.5
+
+                    // How fast it swings its proximities
+                    this.swingVel = 1 + this.type * .03 * rnd(.6, 1, this.type * 9)
+                    if (this.swingVel > 3) this.swingVel = 3
+
+                    // The increased swing of its weapons they get longer
+                    this.swingOft = 2 + this.type * .05 * rnd(.6, 1, this.type * 30)
+                    if (this.swingOft > 5) this.swingOft = 5
+
+                    this.createProx(this.type)
+
+                    // Set gun regen
+                    this.gunRegen = 100 - this.type * 5 * ((this.phase * 5) + 1)
+                    if (this.gunRegen < 15) this.gunRegen = 15
+
+                    // Set spawnable
+                    if (this.type > 10 && !Math.floor(rnd(0, 3, MISSX + MISSX * 157))) {
+                        this.spawnable = true
+                        this.spawnFreq = 300 - this.type * 10
+                        if (this.spawnFreq < 30) this.spawnFreq = 30
+                        this.spawnTime = this.spawnFreq
+                    }
+                }
+
+                update(dt) {
+                    const dx = (hero.x + hero.w / 2) - (this.x + this.w / 2)
+                    const dy = (hero.y + hero.h / 2) - (this.y + this.h / 2)
+                    this.toAngle = Math.atan2(dy, dx)
+
+                    this.frozen -= (1 + this.phase * 3) * dt
+                    if (this.frozen < 0) this.frozen = 0
+
+                    if (this.spawnable) {
+                        this.spawnTime -= dt
+                        if (this.spawnTime < 0) {
+                            this.spawns ++
+                            this.spawnABot()
+                            this.spawnTime = this.spawnFreq
+                        }
+                    }
+
+                    // BULLETS
+                    if (this.gunShoot < 0) {
+                        const speed = .1
+                        const item = {
+                            x: this.noz.x,
+                            y: this.noz.y,
+                            vx: Math.cos(this.toAngle),
+                            vy: Math.sin(this.toAngle),
+                            w: .15,
+                            h: .15,
+                            life: 200,
+                            spark: 0,
+                            damage: 5,
+                        }
+
+                        item.update = dt => {
+                            item.life -= dt
+                            item.x += item.vx * speed * dt
+                            item.y += item.vy * speed * dt
+                            item.spark -= dt
+                            if (item.spark < 0) {
+                                game.cloud(item.x, item.y, item.w, item.h, .1, 1, '#e62', .01, .01)
+                                item.spark = 6
+                            }
+
+                            const GRAY = .7
+                            const TIMER = 7
+                            let range = game.Z*TIMER
+                            if (range < 0) range = 0
+                            if (range > 1) range = 1
+                            ctx.fillStyle = rgb(
+                                lerp(GRAY,0,range),
+                                lerp(GRAY,0,range),
+                                lerp(GRAY,0,range))
+                            fillRect(item.x, item.y, item.w, item.h)
+                        }
+
+                        item.hit = () => item.life = 0
+
+                        game.bad.push(item)
+                        this.gunShoot = this.gunRegen
+                    }
+
+                    // MOVEMENT
+                    this.velChange -= dt
+                    if (this.velChange < 0) {
+                        this.vDirX = random(-this.velChangeAmt, this.velChangeAmt)
+                        this.vDirY = random(-this.velChangeAmt, this.velChangeAmt)
+                        this.velChange = this.velChangeTime
+                    }
+
+                    let ang = 0
+                    if (!this.phase) ang = Math.atan2(
+                        hero.y - this.y, hero.x + hero.w / 2 - this.x - this.w / 2)
+
+                    else if (this.phase == 1) {
+                        ang = Math.atan2(hero.y - 2.5 - this.y, hero.x + hero.w / 2 - this.x - this.w / 2)
+                        const bobLag = .2
+                        this.vy += Math.sin(this.time / bobLag) * (.0005 / bobLag)
+
+                        // If hovering over hero
+                        const rng = 1.7
+                        if (!hero.dead &&
+                            this.y < hero.y &&
+                            this.y > hero.y - 4 &&
+                            this.x > hero.x - rng &&
+                            this.x + this.w < hero.x + hero.w + rng) {
+
+                            this.ray += dt
+                            hero.vy += .005 * dt
+                            hero.health -= hero.upg.recover.curr * .1 * dt
+                            cam.boom(.01, 1)
+                            this.rayStop = false
+                        }
+                        else {
+                            this.ray -= dt
+                            this.rayStop = true
+                        }
+                    }
+
+                    const moveX = Math.cos(ang)
+                    const moveY = Math.sin(ang)
+
+                    if (!this.frozen) {
+                        this.vx += moveX * this.velAttract
+                        this.vy += moveY * this.velAttract
+                    }
+
+                    if (hero.shockWave && !this.boss) {
+                        this.vx -= (moveX + Math.abs(moveY)) * hero.upg.shockwave.curr
+                        this.vy -= moveY * hero.upg.shockwave.curr
+                        this.life = this.life / 4 - hero.upg.shockwave.curr * 2
+                    }
+
+                    if (this.y > GROUND - this.h) {
+                        this.vy -= (this.y + this.h - GROUND) / 10 * dt
+                        this.vDirY = -this.velChangeAmt
+                    }
+                    if (this.y < CEILING) {
+                        this.vy -= (this.y - CEILING) / 10 * dt
+                        this.vDirY = this.velChangeAmt
+                    }
+
+                    if (this.frozen) {
+                        this.vDirX = 0
+                        this.vDirY = 0
+                    }
+
+                    this.vx += this.vDirX * dt
+                    this.vy += this.vDirY * dt
+                    this.vx *= Math.pow(.9, dt)
+                    this.vy *= Math.pow(.9, dt)
+
+                    this.x += this.vx * dt
+                    this.y += this.vy * dt
+
+                    if (this.boss) {
+                        if (hero.x > this.x - 2)
+                            hero.x -= (hero.x - (this.x - 2)) / 5
+
+                        this.x += (this.baseX - this.x) / (15 / (hero.upg.knockback.curr + 1))
+                        this.y += (this.baseY - this.y) / (15 / (hero.upg.knockback.curr + 1))
+                    }
+
+                    if (this.life <= 0) {
+                        zzfx(...[2.3,.5,60,.01,.1,.12,,,,,,,.03,.8,.5,,,.5,.1])
+
+                        // Prevent hero.sum from increasing when defeating boss-spawned enemies
+                        if (!game.boss) hero.sum ++
+                        hero.money += this.value
+
+                        if (!hero.first) {
+                            game.questActive = true
+                            zzfx(...[.2,0,445,.01,.1,.26,,20,,,128,.1,,,,,,.5,.2,.1])
+                        }
+                        hero.first = true
+
+                        // If the destroyed enemy was a boss
+                        if (this.boss) {
+                            game.boss = false
+                            game.killedBoss = true
+                            hero.shockWave = true
+                            hero.afterDeath = true
+                            hero.sum ++
+                            hero.bossesDestroyed ++
+                            game.cloud(this.x, this.y, this.w, this.h, 3, 10, '#9229', .1, .01)
+
+                            cam.boom(.2, 20)
+                        }
+
+                        if (this.frozen) {
+                            game.cloud(this.x, this.y, this.w, this.h, .17, 10, '#fff', .05, .01)
+                            game.cloud(this.x, this.y, this.w, this.h, 1, 1, '#fff5', 0, .04)
+                            game.cloud(this.x, this.y, this.w, this.h, .1, 5, '#99f', 0, .02)
+                        }
+
+                        else {
+                            game.cloud(this.x, this.y, this.w, this.h, .17, 10, '#333', .05, .01)
+                            game.cloud(this.x, this.y, this.w, this.h, 1, 1, '#3335', 0, .04)
+                            game.cloud(this.x, this.y, this.w, this.h, .1, 5, '#b50', 0, .02)
+                        }
+
+                        game.cloud(this.x, this.y, this.w, this.h, .5, 1, [0, 0, 0], 0, -.01, '+' + this.value, .02)
+                        cam.boom(.1, 10)
+                    }
+
+                    game.weapons.push({
+                        x: this.x, y: this.y,
+                        w: this.w, h: this.h,
+                        damage: this.life / (this.phase * 20 + 1) / 3, parent: this})
+                }
+
+                draw(dt) {
+                    if (!game.shop && !this.frozen) this.time += .01 * dt
+                    const jud = Math.sin(this.time * 60) * .01
+                    const y = this.y + jud
+
+                    const drawProx = () => {
+                        for (let i = 0; i < this.upg.length; i ++) {
+                            const prox = this.upg[i]
+                            let pos = {x: prox[0], y: prox[1] + jud}
+
+                            // Iterate through all segments
+                            for (let j = 2; j < prox.length; j ++) {
+                                const newPosition = prox[j](pos, dt, 99+(i+j)*99)
+                                pos = newPosition
+                            }
+                        }
+                    }
+
+                    // HEALTH BAR
+                    if (this.life && this.life < this.maxLife && !this.boss) {
+                        this.smoothLife += (this.life - this.smoothLife) / 3 * dt
+                        this.healthBar += (this.life - this.healthBar) / 10 * dt
+
+                        let life = this.maxLife - this.healthBar
+                        if (life < 0) life = 0
+                        if (life > 1) life = 1
+
+                        const healthHover = quad(life) * .2
+                        const pad = .03
+
+                        ctx.fillStyle = '#222'
+                        fillRect(this.x, y - healthHover, this.w, .1)
+                        ctx.fillStyle = '#262'
+                        fillRect(
+                            this.x + pad,
+                            y - healthHover + pad,
+                            (this.w - pad * 2) * (this.smoothLife / this.maxLife),
+                            .1 - pad * 2)
+                    }
+
+                    if (!this.phase) {
+                        // BODY
+                        this.smoothFrozen += (this.frozen - this.smoothFrozen) / 20 * dt
+                        ctx.fillStyle = rgb(
+                            lerp(this.c[0],this.freeze[0],this.smoothFrozen/20),
+                            lerp(this.c[1],this.freeze[1],this.smoothFrozen/20),
+                            lerp(this.c[2],this.freeze[2],this.smoothFrozen/20))
+                        fillRect(this.x, y, this.w, this.h)
+
+                        const small = .6
+                        ctx.fillStyle = rgb(this.l[0],this.l[1],this.l[2],.5)
+                        fillRect(
+                            this.x + this.w * (1 - small) / 2,
+                            y + this.h * (1 - small) / 2,
+                            this.w * small, this.h * small)
+
+                        ctx.fillStyle = rgb(1, 1, 1,.3)
+                        fillRect(
+                            this.x + this.w * (1 - small) / 2 + .05 + quad(.5 + Math.sin(this.vx * 5) * .5) * .2,
+                            y + this.h * (1 - small) / 2,
+                            .15, this.h * small)
+
+                        if (this.hit > 0) {
+                            ctx.fillStyle = rgb(.7, .2, .2, .5 * this.hit)
+                            fillRect(this.x, y, this.w, this.h)
+
+                            this.hit -= .2 * dt
+                        }
+
+                        drawProx()
+                    }
+
+                    if (this.phase == 1) {
+                        const windowW = this.w * .45
+                        const windowH = this.h * .65
+                        const bodyH = this.h - windowH
+                        const pad = .13
+
+                        // ARM THINGIES
+                        ctx.strokeStyle = '#222'
+                        const long = .4
+                        const fat = .11
+                        const ang1 = 2.5
+                        const ang2 = 1
+                        const gap = .3
+
+                        const Y = y + this.h - .1
+                        const P1 = rot(this.x + this.w * gap, Y, long, fat, 0, 0, ang1)
+                        rot(P1.x, P1.y, long, fat, 0, 0, ang2)
+                        const P2 = rot(this.x + this.w * (1 - gap), Y, long, fat, 0, 0, Math.PI - ang1)
+                        rot(P2.x, P2.y, long, fat, 0, 0, Math.PI - ang2)
+
+                        // RAY
+                        const raySpeed = 50
+                        if (this.ray < 0) this.ray = 0
+                        if (this.ray > raySpeed) this.ray = raySpeed
+
+                        if (this.ray > 0) {
+                            const pos = real(this.x + this.w / 2, y + this.h)
+
+                            let amt = this.ray / raySpeed + .3
+                            if (amt > 1) amt = 1
+
+                            const raySize = 1.3
+                            const grow = game.scale * quad(amt) * raySize
+                            const gX = grow * .9
+                            const gY = grow * 2
+                            const start = 8
+
+                            ctx.fillStyle = rgb(0, 1, 0, amt / 4)
+                            ctx.moveTo(pos.x - gX / start, pos.y)
+                            ctx.lineTo(pos.x + gX / start, pos.y)
+                            ctx.lineTo(pos.x + gX, pos.y + gY)
+                            ctx.lineTo(pos.x + gX / 2, pos.y + gY * 1.1)
+                            ctx.lineTo(pos.x - gX / 2, pos.y + gY * 1.1)
+                            ctx.lineTo(pos.x - gX, pos.y + gY)
+                            ctx.lineTo(pos.x - gX / start, pos.y)
+                            ctx.fill()
+
+                            const rays = 5
+                            for (let i = 0; i < rays; i ++) {
+                                const yPos = ((i / rays + this.time) % 1 + 1) % 1
+                                const w = yPos * 1.4
+                                ctx.fillStyle = rgb(0, .4, 0, quad(yPos * 2) / 2 - (1 - amt))
+                                fillRect(this.x + this.w / 2 - w / 2, y + this.h + yPos * 2, w, .1)
+                            }
+
+                            if (this.rayStop) this.ray -= dt
+                            else this.ray += dt
+                        }
+
+                        // BODY
+                        this.smoothFrozen += (this.frozen - this.smoothFrozen) / 50 * dt
+                        ctx.fillStyle = rgb(
+                            lerp(this.c[0],this.freeze[0],this.smoothFrozen/50),
+                            lerp(this.c[1],this.freeze[1],this.smoothFrozen/50),
+                            lerp(this.c[2],this.freeze[2],this.smoothFrozen/50))
+                        fillRect(this.x, y + this.h - bodyH, this.w, bodyH)
+
+                        // WINDOW
+                        fillRect(this.x + this.w / 2 - windowW / 2, y, windowW, windowH)
+
+                        ctx.fillStyle = rgb(this.l[0],this.l[1],this.l[2],.5)
+                        fillRect(
+                            this.x + this.w / 2 - windowW / 2 + pad,
+                            y + pad,
+                            windowW - pad * 2, windowH - pad)
+
+                        ctx.fillStyle = rgb(1, 1, 1,.3)
+                        fillRect(
+                            this.x + this.w * .4,
+                            y + pad,
+                            .15, windowH - pad)
+
+                        // HIT COLOR
+                        if (this.hit > 0) {
+                            ctx.fillStyle = rgb(.7, .2, .2, .5 * this.hit)
+                            fillRect(this.x, y + this.h - bodyH, this.w, bodyH)
+
+                            this.hit -= .2 * dt
+                        }
+
+                        drawProx()
+                    }
+                }
+            }
+
+
+            class Hero {
+                constructor() {
+                    this.x = 0
+                    this.y = 0
+                    this.w = .5
+                    this.h = .61
+                    this.vx = 0
+                    this.vy = 0
+                    this.normalColor = [.2, .5, .2]
+                    this.normalWindow = [.2, .3, .4]
+                    this.c = this.normalColor // color
+                    this.s = this.normalWindow // window
+                    this.n = [.2, .2, .2] // gun
+                    this.b = [.2, .2, .2] // blade
+                    this.dir = 1
+                    this.flip = 1
+                    this.spin = 0
+                    this.bullets = []
+                    this.friends = []
+                    this.impact = 0
+
+                    // [burn for a while after damage]
+                    this.upg = {
+                        regen: {curr: 1, inc: 1, price: 10, priceInc: 1.8, max: 15, reveal: 0, hide: 0, quality: .7},
+                        force: {curr: 2, inc: 1, price: 15, priceInc: 5, max: 10, reveal: 0, hide: 0, quality: .6},
+                        recover: {curr: 1, inc: 1, price: 20, priceInc: 2, reveal: 15, hide: 10, quality: .7},
+                        health: {curr: 40, inc: 10, price: 30, priceInc: 1.7, reveal: 20, hide: 10, quality: .7},
+                        backup: {curr: 0, inc: 1, price: 40, priceInc: 1.6, max: 1, reveal: 30, hide: 20, quality: .6},
+                        shockwave: {curr: 0, inc: 1, price: 50, priceInc: 4, reveal: 40, hide: 40, quality: .7},
+                        knockback: {curr: 0, inc: 1, price: 60, priceInc: 2, max: 3, reveal: 60, hide: 40, quality: .7},
+                        move: {curr: 10, inc: 1, price: 100, priceInc: 2, max: 20, reveal: 70, hide: 80, quality: .2},
+                        guns: {curr: 1, inc: 1, price: 150, priceInc: 2, max: 10, reveal: 100, hide: 100, quality: 1},
+                        damage: {curr: 1, inc: 1, price: 350, priceInc: 2, reveal: 200, hide: 100, quality: 1},
+                        freeze: {curr: 0, inc: 1, price: 400, priceInc: 2, max: 1, reveal: 200, hide: 50, quality: 1},
+                        explode: {curr: 0, inc: 1, price: 500, priceInc: 1.8, max: 10, reveal: 400, hide: 200, quality: .8},
+                        cheap: {curr: 0, inc: 1, price: 1000, priceInc: 3, reveal: 550, hide: 100, quality: 1.2},
+                        life: {curr: 0, inc: 1, price: 2500, priceInc: 2, reveal: 900, hide: 100, quality: 1.1},
+                        companion: {curr: 0, inc: 1, price: 10000, priceInc: 1.55, reveal: 5000, hide: 100, quality: 2},
+                    }
+
+                    this.upgItems = ['curr', 'inc', 'price', 'priceInc', 'max', 'reveal', 'hide']
+                    this.upgArr = [
+                        'regen', 'force', 'recover', 'health', 'backup', 'shockwave', 'knockback',
+                        'move', 'guns', 'damage', 'freeze', 'explode', 'cheap', 'life', 'companion']
+
+                    // CHEAP UPGRADE
+                    this.upg.cheap.command = () => {
+                        for (let i = 0; i < this.upgArr.length; i ++) {
+                            if (this.upgArr[i] == 'cheap') continue
+                            this.upg[this.upgArr[i]].price *= .5
+                        }
+                    }
+
+                    // COMPANINON UPGRADE
+                    this.upg.companion.command = () => {
+                        this.friends.push({
+                            x: this.x + random(-2, 2),
+                            y: this.y + random(-2, 2),
+                            w: this.w,
+                            h: this.w,
+                            vx: random(-.1, .1),
+                            vy: random(-.1, .1),
+                            twitch: 0,
+                            dirX: 0,
+                            dirY: 0,
+                            regen: 0,
+                            spinBlade: 0,
+                            speak: 0,
+                            speakDir: 1,
+                            phrase: 'Hello!',
+                            speech: {
+                                warn: 0,
+                                careful: false,
+                                danger: false,
+                                dead: false}
+                        })
+                    }
+
+                    this.regen = 0
+
+                    this.health = this.upg.health.curr
+                    this.smoothHealth = this.health
+                    this.dead = 0
+                    this.money = 0
+                    this.smoothMoney = this.money
+                    this.moneyMax = this.money
+                    this.sum = 0
+
+                    this.shockWave = false
+                    this.shockTimer = 0
+                    this.shockCountDown = 200
+
+                    // Make sure hero cannot go back too far
+                    this.backMax = game.padGap / 4
+                    this.xMax = 0
+
+                    // How much you keep after you get destroyed
+                    this.mainRecoverAmt = .9
+                    this.deathRecoverAmt = this.mainRecoverAmt
+
+                    this.progress = []
+                    this.progressX = -1
+                    this.saveProgress()
+
+                    this.afterDeath = false
+                    this.bossesDestroyed = 0
+
+                    this.misses = 0
+                    this.first = false
+                }
+
+                // Sets all upgrades to previous state
+                setProgess(index) {
+                    for (let i = 0; i < this.upgArr.length; i ++) {
+                        const key = this.upgArr[i]
+
+                        for (let j = 0; j < this.upgItems.length; j ++) {
+                            const item = this.upgItems[j]
+                            this.upg[key][item] = this.progress[index][key][item]
+                        }
+                    }
+                }
+
+                saveProgress() {
+                    const x = this.x
+
+                    // Cancel process if state has already been saved
+                    if (x <= this.progressX || game.boss) return
+                    this.progressX = x
+                    if (game.onPad(x)) this.progressX += game.padSize * 1.5
+
+                    // Store lots of improtant information
+                    const checkPoint = {
+                        money: this.money,
+                        progress: this.progressX,
+                        sum: this.sum,
+                        bossesDestroyed: this.bossesDestroyed,
+                        boss: game.boss,
+                        quest: game.quest,
+                        questNum: game.questNum,
+                        misses: this.misses,
+                        x: this.x,
+                        friends: []
+                    }
+
+                    // Store the current upgrades
+                    for (let i = 0; i < this.upgArr.length; i ++) {
+                        const key = this.upgArr[i]
+                        checkPoint[key] = {}
+
+                        for (let j = 0; j < this.upgItems.length; j ++) {
+                            const item = this.upgItems[j]
+                            checkPoint[key][item] = this.upg[key][item]
+                        }
+                    }
+
+                    // Store current friends
+                    for (let i = 0; i < this.friends.length; i ++) {
+                        const friend = this.friends[i]
+                        checkPoint.friends.push(friend)
+                    }
+
+                    this.progress.push(checkPoint)
+                }
+
+                // Go back a few checkpoints if possible
+                respawn() {
+                    this.health = this.upg.health.curr
+                    this.c = this.normalColor
+                    this.s = this.normalWindow
+                    const checkPoint = Math.ceil(this.progress.length * this.deathRecoverAmt) - 1
+
+                    /* checkPoint is the thing that says which checkpoint
+                    you should start at, respectively (0 meaning no checkpoint) */
+                    if (game.fallBack + checkPoint >= 1) {
+                        this.shockWave = true
+                        this.afterDeath = true
+
+                        // Undo changes
+                        this.progress = this.progress.slice(0, checkPoint + 1)
+
+                        // Set upgrades
+                        this.setProgess(checkPoint)
+                        this.dir = 1
+                        this.vx = 0
+                        this.vy = 0
+                        this.y = GROUND
+
+                        const restore = this.progress[checkPoint]
+                        this.money = restore.money
+                        this.progressX = restore.progressX
+                        this.sum = restore.sum
+                        this.bossesDestroyed = restore.bossesDestroyed
+                        this.friends = restore.friends
+                        this.misses = restore.misses
+
+                        this.x = restore.x
+                        this.xMax = this.x
+
+                        game.boss = restore.boss
+                        game.quest = restore.quest
+                        game.questNum = restore.questNum
+                        game.questActive = false
+                        game.oldRight = 0
+
+                        if (game.certainBoss) game.certainBoss.eradicate = true
+
+                        this.shopped = true
+                        key.up = false
+                    }
+                    else this.restart()
+                }
+
+                // Use extra life
+                revive() {
+                    this.health = this.upg.health.curr
+                    this.c = this.normalColor
+                    this.s = this.normalWindow
+                    this.shockWave = true
+
+                    this.upg.life.curr --
+                }
+
+                // Start the game again
+                restart() {
+                    if (game.certainBoss) game.certainBoss.eradicate = true
+
+                    this.health = this.upg.health.curr
+                    this.c = this.normalColor
+                    this.s = this.normalWindow
+
+                    this.x = 0
+                    this.xMax = this.x
+                    this.progressX = -1
+
+                    game.bg = []
+                    this.y = 0
+                    this.money = 0
+                    this.moneyMax = 0
+                    this.sum = 0
+                    this.dir = 1
+                    this.vx = 0
+                    this.vy = 0
+                    this.misses = 0
+
+                    this.bossesDestroyed = 0
+
+                    this.setProgess(0)
+                    game.restart()
+                }
+
+                boom(dt) {
+                    if (!this.dead) {
+                        zzfx(...[2,.1,99,,,.4,1,,-2,-1,,,.04,.8,2,,.1,,.2,.22])
+                        game.cloud(this.x, this.y, this.w, this.h, .6, 15, '#3339', .02, .015)
+                        cam.boom(.5, 15)
+                    }
+                    this.dead += dt
+                    this.c = [.1, .1, .1]
+                    this.s = [.2, .25, .3]
+
+                    game.cloud(this.x, this.y, this.w, this.h, .2, 1, '#520', .02, .02)
+                }
+
+                updateFriends(dt) {
+                    // Follow constants
+                    const MOMENTUM = .99
+                    const MAXSPEED = .96
+                    const FICKLENESS = 300
+                    const RANDFORCE = .005
+                    const TWITCHTIMERMIN = 50
+                    const TWITCHTIMERMAX = 200
+
+                    // Power constants
+                    const REGENCOPY = .85
+
+                    for (let i = 0; i < this.friends.length; i ++) {
+                        const item = this.friends[i]
+                        const DIFF = Math.sin(i)
+                        let xOffset = -1
+
+                        // DETECT WHEN TO SAY SOMETHING
+                        const hp = this.health / this.upg.health.curr
+
+                        if (i < 3) {
+                            if (hp > .5 + DIFF / 3) {
+                                item.speech.warn -= dt
+                                if (item.speech.warn < 0) {
+                                    item.speech.careful = false
+                                    item.speech.danger = false
+                                    item.speech.dead = false
+                                }
+                            }
+                            else item.speech.warn = 300
+
+                            if (hp < .5 + DIFF / 3 && !item.speech.careful) {
+                                item.speech.careful = true
+
+                                let options = []
+                                if (!i) options = ['Careful..', 'Ouch', 'Steady...']
+                                else if (i == 1) options = ['Oooh..', '']
+                                else options = ['Look out!']
+
+                                item.phrase = options[randomInt(0, options.length)]
+                                item.speakDir = 1
+                            }
+
+                            if (hp < .2 + DIFF / 3 && !item.speech.danger) {
+                                item.speech.danger = true
+
+                                let options = []
+                                if (!i) options = ['Oof', 'Whoa', 'Look out!!', 'Careful there!']
+                                else if (i == 1) options = ['That was close!', 'Eeh', 'Yikes']
+                                else options = ['You can do this', 'SQUIRT THEM!']
+
+                                item.phrase = options[randomInt(0, options.length)]
+                                item.speakDir = 1
+                            }
+
+                            if (this.dead && !item.speech.dead) {
+                                item.speech.dead = true
+
+                                let options = []
+                                if (!i) options = ['Nooooooo!', 'Captain no!']
+                                else if (i == 1) options = ['']
+                                else options = ['You got so far', 'You were so close']
+
+                                item.phrase = options[randomInt(0, options.length)]
+                                item.speakDir = 1
+                            }
+                        }
+
+                        if (hp < .5 + DIFF / 3 && !this.dead)
+                            xOffset = 1 + this.vx * 8
+
+                        const dx = (this.x + this.w / 2 + xOffset) - (item.x + item.w / 2)
+                        const dy = (this.y + this.h / 2) - (item.y + item.h / 2)
+
+                        // RANDOMNESS
+                        item.twitch -= dt
+                        if (item.twitch < 0) {
+                            item.dirX = random(-RANDFORCE, RANDFORCE)
+                            item.dirY = random(-RANDFORCE, RANDFORCE)
+                            item.twitch = random(TWITCHTIMERMIN, TWITCHTIMERMAX)
+                        }
+                        item.vx += item.dirX
+                        item.vy += item.dirY
+
+                        // MOVEMENT
+                        item.vx += dx / FICKLENESS
+                        item.vy += dy / FICKLENESS
+
+                        let moveX = MOMENTUM + Math.abs(dx) / 3
+                        let moveY = MOMENTUM + Math.abs(dy) / 3
+                        if (moveX > MAXSPEED) moveX = MAXSPEED
+                        if (moveY > MAXSPEED) moveY = MAXSPEED
+                        item.vx *= Math.pow(moveX, dt)
+                        item.vy *= Math.pow(moveY, dt)
+
+                        // RESTRICTORS
+                        if (item.y > GROUND - item.h) {
+                            item.y = GROUND - item.h
+                            item.vy -= .01
+                        }
+                        if (item.y < CEILING) {
+                            item.y = CEILING
+                            item.vy += .01
+                        }
+
+                        item.x += item.vx * dt
+                        item.y += item.vy * dt
+
+                        // BULLETS
+                        item.regen -= this.upg.regen.curr * .01 * REGENCOPY * dt
+                        if (item.regen < 0) {
+                            const speed = this.upg.force.curr * .002 + Math.abs(item.vx * .08)
+                            const len = Math.ceil(this.upg.guns.curr / 2)
+                            const range = 1.5 / len
+
+                            for (let i = 0; i < len; i ++) this.bullets.push({
+                                x: item.x + item.w,
+                                y: item.y + item.h * .7,
+                                momentum: .9,
+                                vx: speed / .1, vy: 0, speed,
+                                angle: i * range - ((len - 1) * range / 2) + this.vy / 5 + random(-.1, .1),
+                                w: .1, h: .1, life: 1000, shrapnel: false})
+
+                            item.regen = 1
+                        }
+
+                        // DRAW SPEECH
+                        item.speak += item.speakDir * dt
+                        if (item.speak > 0) {
+                            const SPEED = .1
+
+                            // GET WIDTH OF STATEMENT
+                            const width = item.phrase.length * .145
+
+                            // DRAW BOX
+                            let time = item.speak * SPEED
+                            if (time > 1) time = 1
+                            const boxW = quad(time) * width
+                            ctx.fillStyle = '#fff5'
+                            fillRect(item.x + item.w / 2 - boxW / 2, item.y - boxW / width * .42, boxW, .24)
+
+                            // DRAW TEXT
+                            ctx.textAlign = 'center'
+                            ctx.font = (game.scale / 5) + 'px font'
+                            ctx.fillStyle = rgb(.1, .1, .1, item.speak * SPEED - 1)
+                            fillText(item.phrase, item.x + item.w / 2, item.y - .23)
+                            ctx.textAlign = 'left'
+
+                            // STOP TALKING
+                            if (item.speak > 8 / SPEED)
+                                item.speakDir = -1
+                        }
+                        else item.speak = 0
+
+                        // DRAW
+                        const a = 1.3
+                        ctx.fillStyle = '#884'
+                        fillRect(item.x, item.y, item.w, item.h)
+
+                        ctx.fillStyle = rgb(this.s[0]*a, this.s[1]*a, this.s[2]*a)
+                        fillRect(item.x + item.w, item.y + .07, -item.w * .6, item.h * .5)
+
+                        ctx.fillStyle = '#222'
+                        fillRect(item.x + item.w, item.y + item.h * .7, .06, .1)
+
+                        ctx.fillStyle = '#333'
+                        fillRect(item.x + item.w / 2 - .03, item.y, .06, -.1)
+
+                        item.spinBlade += (item.vy + Math.abs(item.vx)) * 9
+                        let blade = Math.abs(Math.sin(item.spinBlade)) * item.w * .9
+                        if (blade < .06) blade = .06
+
+                        fillRect(item.x + item.w / 2 - blade / 2, item.y - .12, blade, .08)
+                    }
+                }
+
+                update(dt) {
+                    this.updateFriends(dt)
+                    this.smoothHealth += (this.health - this.smoothHealth) / 4 * dt
+                    this.impact -= .1 * dt
+                    if (this.impact < 0) this.impact = 0
+
+                    // SHOCKWAVE UPGRADE
+                    const readyForShock = this.health < this.upg.health.curr * .2
+                    if (!readyForShock) this.shockTimer -= dt
+
+                    // Initiate shockwave if copter was just destroyed or else appropriate
+                    if (!this.afterDeath) this.shockWave = false
+                    if ((readyForShock && this.upg.shockwave.curr && this.shockTimer < 0) ||
+                        (this.afterDeath && this.shockWave)) {
+                        this.shockWave = true
+                        cam.boom(.1, 10)
+                        game.filter = 1
+                        zzfx(...[2,.1,99,,,.4,1,,-2,-1,,,.04,.8,2,,.1,,.2,.22])
+
+                        // The copter has to be safe for at least shockCountDown frames before another wave
+                        this.shockTimer = this.shockCountDown
+                    }
+                    this.afterDeath = false
+
+                    const velocityX = this.upg.move.curr * .002
+                    const velocityY = .01
+                    const momentum = .9
+                    const damping = .5
+                    const gravity = .002
+
+                    // Restrictors
+                    let air = true
+
+                    if (this.y + this.vy / 2 < CEILING) {
+                        this.y = CEILING
+                        this.vy = 0
+                        air = false
+                    }
+                    else if (this.y + this.vy / 2 > GROUND - this.h - game.padHeight &&
+                        game.onPad(this.x + this.w / 2 - game.padSize)) {
+                        this.y = GROUND - this.h - .2
+                        this.vy = 0
+                        air = false
+
+                        if (key.up) this.shopped = true
+                        if (!this.shopped && !this.dead) {
+                            key.down = false
+                            key.left = false
+                            key.right = false
+                            game.shop = true
+                            zzfx(...[2,.1,50,.1,.11,.2,,1.3,,.13,,,,.5,,,,.9,.06])
+                        }
+                    }
+                    else {
+                        this.shopped = false
+                        if (this.y + this.vy / 2 > GROUND - this.h) {
+                            this.y = GROUND - this.h
+                            this.vy = 0
+                            air = false
+                        }
+                    }
+
+                    // Death
+                    if (this.health <= 0) {
+                        this.boom(dt)
+                        this.health = 0
+                        this.vy += gravity * dt
+                        this.y += this.vy * damping * dt
+                        return
+                    }
+                    else {
+                        this.health += this.upg.recover.curr * .02 * dt
+                        if (this.health > this.upg.health.curr)
+                            this.health = this.upg.health.curr
+                    }
+
+                    // Keys
+                    if (key.up) this.vy -= velocityY * dt
+                    if (key.down) this.vy += velocityY * dt
+                    if (air) {
+                        if (key.left) this.vx -= velocityX * dt
+                        if (key.right) this.vx += velocityX * dt
+                    }
+
+                    // Movement
+                    this.vx *= Math.pow(momentum, dt)
+                    this.vy += gravity * dt
+                    this.x += this.vx * damping * dt
+                    this.y += this.vy * damping * dt
+
+                    // Flip
+                    const flipSpeed = .35
+                    if (this.vx < 0) this.dir = -1
+                    else this.dir = 1
+                    if (this.flip > this.dir) this.flip -= flipSpeed * dt
+                    else if (this.flip < this.dir) this.flip += flipSpeed * dt
+                    if (this.flip < -1) this.flip = -1
+                    else if (this.flip > 1) this.flip = 1
+
+                    this.spin += (Math.abs(this.vy) + Math.abs(this.vx)) * 2 * dt
+
+                    // Guns
+                    const bulletMomentum = .9
+                    this.regen -= this.upg.regen.curr * .01 * dt
+                    if (this.regen < 0) {
+                        const volume = .8/(this.upg.regen.curr/6)
+                        zzfx(...[volume,.05,99,,,,,,,1,,,.04,.6,,,.1,,,.22])
+
+                        const w = .12
+                        const h = .12
+                        const xSizeOft = w * (this.dir / 2 - .5)
+                        const xOft = this.w / 2 * this.dir
+
+                        const speed = this.upg.force.curr * .002 + Math.abs(this.vx * .05)
+                        const len = this.upg.guns.curr
+                        const range = 1.5 / len
+
+                        for (let i = 0; i < len; i ++) {
+                            this.bullets.push({
+                                x: this.x + this.w / 2 + xOft + xSizeOft,
+                                y: this.y + .5 - w / 2,
+                                momentum: bulletMomentum,
+                                vx: (speed / (1 - bulletMomentum)) * this.dir, vy: 0, speed,
+                                angle: i * range - ((len - 1) * range / 2) +
+                                    (this.dir * Math.PI / 2 - Math.PI / 2) + this.vy / 5 +
+                                    random(-.1, .1),
+                                w, h, life: 1000, shrapnel: false})
+                        }
+
+                        this.regen = 1
+                        cam.boom(.02, 10)
+                    }
+
+                    const newBullets = []
+                    for (let i = 0; i < this.bullets.length; i ++) {
+                        const item = this.bullets[i]
+
+                        item.vx += Math.cos(item.angle) * item.speed * dt
+                        item.vy += Math.sin(item.angle) * item.speed * dt
+
+                        for (let j = 0; j < game.bots.length; j ++) {
+                            const bot = game.bots[j]
+                            const range = {
+                                x: bot.x + bot.w / 2 - bot.w2 / 2,
+                                y: bot.y + bot.h / 2 - bot.h2 / 2,
+                                w: bot.w2, h: bot.h2}
+
+                            if (collide(item, range)) {
+                                const dx = (range.x + range.w / 2) - item.x
+                                const dy = (range.y + range.h / 2) - item.y
+                                item.angle = Math.atan2(dy, dx)
+
+                                if (collide(item, bot)) {
+                                    bot.life -= this.upg.damage.curr
+                                    bot.hit = 1
+
+                                    // BACK UP
+                                    if (this.upg.backup && this.health < this.upg.health.curr / 2)
+                                        bot.life -= this.upg.damage.curr
+
+                                    // KNOCK BACK
+                                    if (this.upg.knockback.curr) {
+                                        let amt = .03 / ((bot.phase * 40) + 1)
+                                        if (bot.boss) amt = .03
+                                        bot.vx += Math.cos(item.angle) * this.upg.knockback.curr * amt
+                                        bot.vy += Math.sin(item.angle) * this.upg.knockback.curr * amt
+                                    }
+
+                                    // FREEZE
+                                    if (!bot.boss && this.upg.freeze.curr && random(0, 100) < 40)
+                                        bot.frozen = this.upg.freeze.curr * 100
+
+                                    item.life = 0
+                                    if (bot.life <= 0 && !item.shrapnel) {
+                                        item.shrapnel = true
+                                        for (let k = 0; k < this.upg.explode.curr; k ++) {
+                                            const speed = .01
+                                            newBullets.push({
+                                                x: item.x, y: item.y, momentum: bulletMomentum,
+                                                vx: (speed / (1 - bulletMomentum)) * this.dir, vy: 0, speed,
+                                                angle: k / this.upg.explode.curr * Math.PI * 2 + random(0, .5),
+                                                w: item.w, h: item.h, life: 200, shrapnel: false})
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        item.life -= dt
+                        if (item.life < 0 || offScreen(item, 1.15)) {
+                            this.bullets.splice(i, 1)
+                            i --
+                        }
+
+                        item.vx *= Math.pow(item.momentum, dt)
+                        item.vy *= Math.pow(item.momentum, dt)
+                        item.x += item.vx * dt
+                        item.y += item.vy * dt
+
+                        const maxBullets = 700
+                        if (i > this.bullets.length - maxBullets) {
+                            const grayMax = .4
+                            let R = rnd(0, grayMax, this.upg.explode.curr*9)
+                            let G = rnd(0, grayMax, (this.upg.guns.curr-1)*99)
+                            let B = rnd(0, grayMax, (this.upg.damage.curr-1)*999)
+
+                            const GRAY = .7
+                            const SWITCHSPEED = 7
+                            const SWITCHOFT = 2
+                            let range = game.Z*SWITCHSPEED-SWITCHOFT
+                            if (range < 0) range = 0
+                            if (range > 1) range = 1
+                            ctx.fillStyle = rgb(
+                                lerp(GRAY+R,R,range),
+                                lerp(GRAY+G,G,range),
+                                lerp(GRAY+B,B,range))
+                            fillRect(item.x, item.y, item.w, item.h)
+                        }
+                    }
+
+                    this.bullets.push(...newBullets)
+
+                    // Completed quest
+                    if (this.sum >= game.questNum) {
+                        game.quest ++
+                        zzfx(...[.2,0,445,.01,.1,.26,,20,,,128,.1,,,,,,.5,.2,.1])
+
+                        const set = () => {
+                            game.questTime = 0
+                            game.questActive = true
+                            game.questNum += Math.floor(game.questInc / (1 + (game.quest / 1.8)))
+                            if (game.questNum > 100) game.questNum = 100
+
+                            this.sum = 0
+                            this.money += game.questReward
+                        }
+
+                        // Check if it was a boss battle
+                        if (game.killedBoss) {
+                            game.killedBoss = false
+                            game.questReward = this.x * 6
+                            this.health = this.upg.health.curr
+                            this.shockWave = true
+                            this.afterDeath = true
+                            game.questNum = game.oldQuestNum
+
+                            game.fallBack = hero.progress.length - 1
+                            game.fallRise = 0
+
+                            this.deathRecoverAmt = this.mainRecoverAmt
+
+                            set()
+
+                            hero.progress = []
+                            hero.saveProgress()
+
+                            if (game.quest == 21) {
+                                this.shockWave = true
+                                this.afterDeath = true
+                                this.upg.regen.curr = 0
+                                this.regen = 0
+
+                                game.ending = hero.x + cvs.width / game.scale / 2
+                            }
+                        }
+
+                        else {
+                            game.questReward = game.questNum * (2.2 + (game.quest - 1) / 2)
+                            set()
+
+                            if (game.quest == 16) game.mist = dt
+
+                            // Initiate boss if ready
+                            if (game.quest % 10 == 0) {
+                                /* hero.sum goes up only when the boss is defeated,
+                                so you only need to destroy "one" robot, so to speak */
+
+                                game.oldQuestNum = game.questNum
+                                game.questNum = 1
+                                game.boss = true
+
+                                this.shockWave = true
+                                this.afterDeath = true
+                                this.deathRecoverAmt = 1
+
+                                // Create boss just off the screen
+                                const bossX = cam.x + 5 + cvs.width / 2 / game.scale
+                                const bot = new Bot(bossX, CEILING + 2, 0, item => {
+                                    const size = 6
+
+                                    item.boss = true
+                                    item.w *= size
+                                    item.h *= size
+                                    item.w2 = item.w
+                                    item.h2 = item.h
+                                    item.maxLife =
+                                        this.upg.damage.curr * this.upg.guns.curr *
+                                        ((this.upg.companion.curr * .6) + 1) * 100
+                                    item.spawnable = true
+                                    item.spawnFreq = 40
+
+                                    // Make max proximities
+                                    item.upg = []
+                                    item.createProx(100)
+
+                                    // Swing proximities around
+                                    item.swingVel = 4
+
+                                    item.spawnABot = () => game.botRequests.push({
+                                        x: item.x + rnd(0, size - 1, item.spawns),
+                                        y: item.y + rnd(0, size - 1, item.spawns * 9),
+                                        type: Math.floor(rnd(1, 15, item.spawns * 99))})
+                                }, this.bossesDestroyed)
+                                game.bots.push(bot)
+                                game.certainBoss = bot
+                            }
+                        }
+                    }
+
+                    if (this.x > this.xMax)
+                        this.xMax = this.x
+                    if (this.x < this.xMax - this.backMax) {
+                        this.x = this.xMax - this.backMax
+                        this.vx = 0
+                    }
+                }
+
+                draw(dt) {
+                    const tall = this.h - this.w
+                    const y = this.y + tall
+                    const windowW = this.w * .6
+                    const windowH = this.w * .5
+                    const windowY = .07
+
+                    const gunY = .34
+                    const gunW = .16 + Math.sin(Math.PI / 2 + this.flip * Math.PI) * .1
+                    const gunH = .1
+
+                    const bladeH = .08
+                    const poleW = .05
+                    let bladeW = Math.sin(this.spin * 1.5) * this.w * .9
+                    if (bladeW < poleW && bladeW > -poleW) bladeW = poleW
+
+                    // Pod
+                    const qd = quad(game.Z)
+                    ctx.fillStyle = rgb(
+                        lerp(this.c[0]*1.3,this.c[0],qd),
+                        lerp(this.c[1]*1.3,this.c[1],qd),
+                        lerp(this.c[2]*1.3,this.c[2],qd))
+                    fillRect(this.x, y, this.w, this.w)
+
+                    // Window
+                    const halfWindow = this.w / 2 - windowW / 2
+                    ctx.fillStyle = rgb(this.s[0],this.s[1],this.s[2])
+                    fillRect(
+                        this.x + this.w / 2 + halfWindow * this.flip + windowW / 2,
+                        y + windowY, -windowW, windowH)
+
+                    // Gun
+                    const halfGun = this.w / 2 + gunW / 2
+                    ctx.fillStyle = rgb(this.n[0],this.n[1],this.n[2])
+                    fillRect(
+                        this.x + this.w / 2 + halfGun * this.flip - gunW / 2,
+                        y + gunY, gunW, gunH)
+
+                    // Blade
+                    ctx.fillStyle = rgb(this.b[0],this.b[1],this.b[2])
+                    fillRect(
+                        this.x + this.w / 2 - bladeW / 2,
+                        this.y, bladeW, bladeH)
+
+                    // Pole
+                    fillRect(
+                        this.x + this.w / 2 - poleW / 2,
+                        this.y + bladeH, poleW, tall - bladeH)
+                }
+            }
+
+
+            class Camera {
+                constructor() {
+                    this.x = 0
+                    this.y = 0
+                    this.vx = 0
+                    this.vy = 0
+
+                    this.goal = hero
+                    this.booms = []
+                }
+
+                boom(amt, time) {
+                    this.booms.push({amt, time})
+                }
+
+                update(dt) {
+                    for (let i = 0; i < this.booms.length; i ++) {
+                        const item = this.booms[i]
+                        item.time -= dt
+                        this.x += random(-item.amt, item.amt)
+                        this.y += random(-item.amt, item.amt)
+                        if (item.time < 0)
+                            this.booms.splice(i, 1)
+                    }
+
+                    const followX = .1
+                    const followY = .05
+
+                    this.vy += (this.goal.y + this.goal.h / 2 - this.y) * followY * dt
+                    this.vx += (this.goal.x + this.goal.w / 2 - this.x) * followX * dt
+                    this.vx *= Math.pow(.8, dt)
+                    this.vy *= Math.pow(.8, dt)
+                    this.y += this.vy * dt
+                    this.x += this.vx * dt
+
+                    const top = CEILING + cvs.height / 2 / game.scale
+                    if (this.y < top)
+                        this.y = top
+                }
+            }
+
+
+            class Game {
+                constructor() {
+                    this.scale = 0
+                    this.time = 0
+                    this.oldPerf = 0
+                    this.bots = []
+                    // Bots spawning bots
+                    this.botRequests = []
+
+                    this.oldRight = 0
+                    this.particles = []
+                    this.bad = []
+                    this.weapons = []
+
+                    this.padGap = 90
+                    this.padSize = 3
+                    this.padHeight = .2
+                    this.padStartOft = 50
+                    this.padOnScreen = false
+
+                    this.shop = false
+                    this.shopTime = 0
+                    this.shopClose = false
+                    this.shopIdx = 1
+                    this.shopSmoothIdx = 0
+                    this.purchase = 0
+                    this.cheapest = {index: -1, quality: -1, price: -1}
+                    this.cheapestScanned = false
+
+                    // day/night cycle
+                    this.Z = 0
+                    this.bg = []
+
+                    this.restart()
+
+                    this.filter = 1
+                    this.restartOption = 0
+
+                    this.bossTime = 0
+                    this.certainBoss = 0
+                    this.killedBoss = false
+                    this.fallBack = 0
+                    this.fallRise = 0
+
+                    this.mist = 0
+                    this.ending = 0
+
+                    this.start = true
+                    this.startTime = 0
+                    this.startClose = 0
+                    this.startChoice = 0
+                    this.dedication = 0
+
+                    const TEXT = 'SQUIRTCOPTER'
+                    this.homeText = []
+                    for (let i = 0; i < TEXT.length; i ++)
+                        this.homeText.push({char: TEXT[i], y: 0, ySpeed: 0})
+
+                    this.box = 0
+                    this.giveUp = 0
+
+                    this.playTime = 0
+
+                    this.resize()
+                }
+
+                restart() {
+                    this.boss = false
+                    this.quest = 1
+                    this.questTime = 0
+                    this.oldQuestNum = 10
+                    this.questNum = 10
+                    this.questActive = false
+                    this.questReward = 2.2
+                    this.questInc = 50
+                    this.questSpring = {v: 0, y: 0, goal: 0}
+                    this.oldRight = 0
+                }
+
+                dist(x) {
+                    return Math.floor(x / 2)
+                }
+
+                cloud(x, y, w, h, size, amt, color, boom, shrink, text = '', fade = 0) {
+                    for (let i = 0; i < amt; i ++)
+                        this.particles.push({
+                            x: x + random(0, w),
+                            y: y + random(0, h),
+                            vx: random(-boom, boom),
+                            vy: random(-boom, boom),
+                            size, color, shrink, text, fade, alpha: 1})
+                }
+
+                resize() {
+                    let box = cvs.width
+                    if (cvs.width < cvs.height)
+                        box = cvs.height
+
+                    let box2 = cvs.width
+                    if (cvs.width > cvs.height)
+                        box2 = cvs.height
+
+                    const zoom = .03
+                    this.scale = (cvs.width + cvs.height) * zoom + box * zoom
+                    this.box = box2 / 15
+                }
+
+                makeBot(idx) {
+                    if (idx < 1 || this.ending) return
+                    const maxDense = .75
+                    let freq = ((idx + this.padSize * 2) % this.padGap) / this.padGap * maxDense
+
+                    if (rndDec(idx * idx * 99) < freq + idx / 1800)
+                        this.bots.push(new Bot(idx, rnd(CEILING + 1, GROUND - 2, idx * 9)))
+                }
+
+                overlay(dt, yOft) {
+                    if (this.boss) {
+                        this.bossTime += dt
+                        let time = this.bossTime / 100
+                        if (time > 1) time = 1
+
+                        const boxW = quad(time) * cvs.width * .8
+                        const boxH = this.scale * .4
+                        const gap = this.scale * .08
+
+                        ctx.fillStyle = '#222'
+                        ctx.fillRect(cvs.width / 2 - boxW / 2, yOft - boxH - this.scale * .1, boxW, boxH)
+
+                        ctx.fillStyle = rgb(.5 + Math.sin(this.bossTime / 10) * .3, .1, .1)
+                        ctx.fillRect(
+                            cvs.width / 2 - boxW / 2 + gap,
+                            yOft - boxH - this.scale * .1 + gap,
+                            (boxW - gap * 2) * (this.certainBoss.life / this.certainBoss.maxLife), boxH - gap * 2)
+                    }
+                    else this.bossTime = 0
+
+                    const pause = 50
+                    if (hero.dead > pause) {
+                        let time = (hero.dead - pause) / 300
+                        if (time > 1) time = 1
+
+                        let idx = 0
+                        const makeButton = (y, text, good = true, shake = false) => {
+                            const hover = this.restartOption == idx
+                            let bob =  0
+
+                            ctx.fillStyle = '#422'
+                            if (good) ctx.fillStyle = '#343'
+
+                            if (hover) {
+                                ctx.fillStyle = '#755'
+                                if (good) {
+                                    ctx.fillStyle = '#676'
+                                    bob = quad(.5 + Math.sin(hero.dead / 5) * .5) * this.scale * .13
+                                }
+                            }
+                            ctx.fillRect(cvs.width / 2 - buttonW / 2, yOft + boxH * y, buttonW, buttonH)
+
+                            let xx = 0
+                            let yy = 0
+
+                            if (shake) {
+                                const amt = .02
+                                xx = random(-amt, amt)
+                                yy = random(-amt, amt)
+                            }
+
+                            ctx.fillStyle = '#000'
+                            if (hover) ctx.fillStyle = '#fff'
+                            ctx.font = (this.scale / 3.4) + 'px font'
+                            ctx.fillText(
+                                text, cvs.width / 2 - buttonW * .45 + xx * this.scale,
+                                yOft + boxH * y + boxH * .11 + yy * this.scale)
+
+                            const w = this.scale * .07
+                            const segs = 3
+                            for (let i = 0; i < segs; i ++) {
+                                const h = this.scale * .07 * (segs - i)
+                                ctx.fillRect(
+                                    cvs.width / 2 + buttonW * .33 + w * i + bob,
+                                    yOft + boxH * y + boxH * .075 - h / 2, w, h)
+                            }
+
+                            idx ++
+                        }
+
+                        const pad = this.scale * .2
+                        const boxW = this.scale * 4.5
+                        const boxH = this.scale * 3.5
+                        const buttonW = boxW * .7
+                        const buttonH = boxH * .15
+                        const yUp = .7 * this.scale
+                        const yOft = quad(time) * cvs.height - boxH / 2 - yUp - cvs.height / 2
+
+                        ctx.fillStyle = '#111'
+                        ctx.fillRect(cvs.width / 2 - boxW / 2, yOft + yUp, boxW, boxH)
+
+                        ctx.strokeStyle = '#888'
+                        ctx.lineWidth = this.scale * .07
+                        ctx.strokeRect(cvs.width / 2 - boxW / 2 + pad, yOft + yUp + pad, boxW - pad * 2, boxH - pad * 2)
+
+                        makeButton(.53, 'USE LIVES [' + hero.upg.life.curr + ']', hero.upg.life.curr > 0)
+                        makeButton(.73, 'CONTINUE')
+
+                        if (this.giveUp <= 0) makeButton(.93, 'GIVE UP')
+                        else {
+                            this.giveUp -= dt
+                            if (this.giveUp < 1) this.giveUp = 1
+                            makeButton(.93, 'DON\'T GIVE UP', false, this.giveUp > 10)
+                        }
+
+                        if (time >= .6) {
+                            if (key.down) {
+                                key.down = false
+                                this.restartOption ++
+                                if (this.restartOption > idx - 1) this.restartOption = 0
+                            }
+
+                            else if (key.up) {
+                                key.up = false
+                                this.restartOption --
+                                if (this.restartOption < 0) this.restartOption = idx - 1
+                            }
+
+                            else if (key.right) {
+                                key.right = false
+
+                                const set = () => {
+                                    hero.dead = 0
+                                    hero.afterDeath = true
+                                    this.giveUp = 0
+                                    this.restartOption = 0
+                                }
+
+                                if (!this.restartOption && hero.upg.life.curr > 0) {
+                                    set()
+                                    hero.revive()
+                                }
+                                else if (this.restartOption == 1) {
+                                    set()
+                                    hero.respawn()
+                                }
+                                else if (this.restartOption == 2) {
+                                    this.giveUp = 30
+                                    zzfx(...[.5,,231,.03,.08,.12,,2.67,,,,,.09,1.8,,,.11,.49])
+                                }
+                            }
+                        }
+
+                        ctx.textAlign = 'center'
+                        ctx.font = (this.scale / 2) + 'px font'
+                        drawText('DESTROYED', cvs.width / 2, yOft + boxH * .45, '#fff', '#b00')
+                        ctx.textAlign = 'left'
+                    }
+
+                    else if (hero.dead) {
+                        ctx.fillStyle = rgb(0, 0, 0, .5 - hero.dead / 60)
+                        ctx.fillRect(0, 0, cvs.width, cvs.height)
+                    }
+
+                    this.filter -= .025 * dt
+                    ctx.fillStyle = rgb(1, 1, 1, this.filter * .7)
+                    ctx.fillRect(0, 0, cvs.width, cvs.height)
+
+                    // START SCREEN
+                    if (this.start) {
+                        const drop = .02
+                        if (this.startClose) {
+                            this.startClose += drop * dt
+                            if (this.startClose > 1) {
+                                this.startClose = 1
+                                this.start = false
+                            }
+                        }
+
+                        const shift = quad(this.startClose)
+                        const fontSize = this.box * 1.4
+                        const charWidth = fontSize * .8
+                        const oft = this.box * .06
+
+                        const bg = .06
+                        ctx.fillStyle = rgb(bg, bg, bg, 1 - shift)
+                        ctx.fillRect(0, 0, cvs.width, cvs.height)
+
+                        // BORDERS
+                        const max = this.box * .001
+                        let time = this.startTime * .02
+                        if (time > 1) time = 1
+                        const slideIn = (quad(time) - shift) * cvs.width * max
+
+                        ctx.fillStyle = '#421'
+                        ctx.fillRect(0, 0, slideIn, cvs.height)
+                        ctx.fillRect(cvs.width, 0, -slideIn, cvs.height)
+
+                        const s = cvs.width * max * .4
+                        ctx.fillStyle = '#753'
+                        ctx.fillRect(slideIn, 0, -s, cvs.height)
+                        ctx.fillRect(cvs.width - slideIn, 0, s, cvs.height)
+
+                        // DESC
+                        const wait = 100
+                        const rise = (10 / (this.startTime - wait + 30)) * this.box
+
+                        ctx.textAlign = 'center'
+                        let a = (this.startTime - wait) / 100
+                        if (a > 1) a = 1
+                        ctx.fillStyle = rgb(.8, .8, .8, a - shift)
+                        ctx.font = (this.box * .5) + 'px font, sans-serif'
+                        ctx.fillText('By Joachim Ford', cvs.width / 2, this.box * 5.2 + rise)
+
+                        // LETTERS
+                        let x = cvs.width / 2 - (this.homeText.length + 1) * charWidth * .5
+                        ctx.font = fontSize + 'px startFont, sans-serif'
+
+                        const drawLetter = (letter, y, i) => {
+                            x += charWidth
+                            const Y = y * this.box * 4
+
+                            ctx.fillStyle = '#421'
+                            const w = this.box * .1
+                            ctx.fillRect(x - w / 2, 0, w, Y - charWidth)
+
+                            ctx.fillStyle = '#753'
+                            ctx.fillText(letter, x, Y)
+                            ctx.fillStyle = '#fff'
+                            if (!i) ctx.fillStyle = '#6f6'
+                            ctx.fillText(letter, x - oft, Y - oft * 2)
+                        }
+
+                        const reveal = 40
+                        for (let i = 0; i < this.homeText.length; i ++) {
+                            const item = this.homeText[i]
+                            const cap = reveal - rnd(0, reveal, i * 2) + i * 3
+                            drawLetter(item.char, item.y, i)
+                            if (this.startTime < cap) continue
+                        
+                            let goal = rnd(1, 1.2, i * i + 2)
+                            if (this.startClose > rnd(0, .5, i * 99)) goal = -1
+                            item.ySpeed += (goal - item.y) / 40 * dt
+                            item.ySpeed *= Math.pow(.9, dt)
+                            item.y += item.ySpeed * dt
+                        }
+
+                        let buttonY = 0
+                        let idx = 0
+                        const buttonW = this.box * 12
+                        const buttonH = this.box * 1.7
+                        const buttonGap = this.box * .5
+                        const buttonAppear = 150
+                        const buttonDifference = 5
+                        const buttonStatic = 25
+                        const buttonFade = .05
+
+                        const button = (text, func) => {
+                            const scrollOft = buttonAppear - idx * buttonDifference
+                            let scrolly = (this.startTime - scrollOft) * .2
+                            if (scrolly < 0) scrolly = 0
+
+                            let hover = false
+                            const yPos = 2.17
+                            const boxX = cvs.width / 2 - buttonW / 2
+                            const boxY = cvs.height / yPos + buttonY + (shift + quad(1 / (scrolly + 1))) * cvs.height
+
+                            const hoverMouse = collide(mouse, {x: boxX, y: boxY, w: buttonW, h: buttonH})
+                            if ((hoverMouse || this.startChoice == idx) &&
+                                this.startTime > scrollOft + buttonStatic) {
+
+                                if ((mouse.press || key.confirm) &&
+                                    this.startTime > scrollOft + 100)
+                                    func()
+
+                                hover = true
+                                key.confirm = false
+                                this.startChoice = idx
+                                if (hoverMouse) document.body.style.cursor = 'pointer'
+                            }
+
+                            let bob = 0
+                            if (hover) bob = Math.sin(this.dedication * 16) * this.box * .05
+                            const textY = boxY + buttonH * .65 + oft + bob
+
+                            ctx.fillStyle = '#432'
+                            ctx.fillRect(boxX + oft * 1.5, boxY + oft * 1.5, buttonW, buttonH)
+                            ctx.fillStyle = '#973'
+                            if (hover) ctx.fillStyle = '#ca6'
+                            ctx.fillRect(boxX, boxY, buttonW, buttonH)
+
+                            ctx.fillStyle = '#000'
+                            ctx.fillText(text, cvs.width / 2 + oft, textY + oft)
+                            ctx.fillStyle = '#fff'
+                            ctx.fillText(text, cvs.width / 2, textY)
+
+                            if (idx == this.startChoice) {
+                                const size = buttonW * .05
+                                ctx.fillStyle = '#000'
+                                ctx.fillRect(
+                                    boxX + buttonW * .9 + oft,
+                                    boxY + buttonH / 2 - size / 2 + bob + oft,
+                                    size, size)
+                                ctx.fillStyle = '#fff'
+                                ctx.fillRect(
+                                    boxX + buttonW * .9,
+                                    boxY + buttonH / 2 - size / 2 + bob,
+                                    size, size)
+                            }
+
+                            ctx.fillStyle = rgb(bg, bg, bg, (buttonStatic - scrolly) * buttonFade)
+                            ctx.fillRect(boxX, boxY, buttonW + oft * 1.5, buttonH + oft * 1.5)
+
+                            idx ++
+                            buttonY += buttonH + buttonGap
+                        }
+
+                        ctx.font = (buttonH * .5) + 'px startFont, sans-serif'
+                        button('PLAY', () => {
+                            this.startClose += dt * drop
+                            if (!music.started && music.switchedOn) {
+                                playMusic()
+                                music.started = true
+                            }
+                        })
+
+                        if (music.switchedOn) button('SOUND: ON', () => music.switchedOn = false)
+                        else button('SOUND: OFF', () => music.switchedOn = true)
+
+                        ctx.font = (buttonH * .4) + 'px startFont, sans-serif'
+                        button('JOACHIMFORD.UK', () => window.open('https://joachimford.uk', '_blank'))
+
+                        if (key.up) {
+                            mouse.x = 0
+                            this.startChoice --
+                            key.up = false
+                        }
+                        if (key.down) {
+                            mouse.x = 0
+                            this.startChoice ++
+                            key.down = false
+                        }
+                        if (this.startChoice < 0) this.startChoice = 0
+                        if (this.startChoice >= idx) this.startChoice = idx - 1
+
+                        // DEDICATION
+                        const pause = 2.5
+                        this.dedication += .02 * dt
+                        let ded = this.dedication
+                        if (ded > 1) ded = 1
+                        let fadeOut = this.dedication - pause
+                        if (fadeOut < 0) fadeOut = 0
+                        if (this.dedication > pause + 2)
+                            this.startTime += dt
+
+                        ctx.fillStyle = rgb(0, 0, 0, (pause + 2) - this.dedication)
+                        ctx.fillRect(0, 0, cvs.width, cvs.height)
+
+                        ctx.font = (this.box) + 'px startFont, sans-serif'
+                        ctx.fillStyle = rgb(1, 1, 1, ded - fadeOut)
+                        ctx.fillText('To', cvs.width / 2, cvs.height / 2)
+                        ctx.fillText('@JeroenG', cvs.width / 2, cvs.height / 2 + this.box)
+
+                        ctx.textAlign = 'left'
+                    }
+
+                    mouse.press = false
+                }
+
+                onPad(x) {
+                    if (this.ending && x > this.ending) return false
+                    x -= this.padStartOft
+                    return x % this.padGap <= this.padSize && x > 0
+                }
+
+                nthPad(x) {
+                    x -= this.padStartOft / 2
+                    return Math.floor(x / this.padGap) + 1
+                }
+
+                bangOnPad(x) {
+                    if (this.ending && x > this.ending) return false
+                    x -= this.padStartOft
+                    return x % this.padGap == this.padSize && x > 0
+                }
+
+                update(dt) {
+                    const on = !this.shop && !this.start
+                    if (on) this.time += dt
+                    else if (this.shop) {
+                        if (this.shopClose) this.shopTime -= dt
+                        else this.shopTime += dt
+                    }
+                    const dayLength = this.time / 3000
+
+                    this.Z = .5 + Math.sin(dayLength) * .5
+                    if (this.ending && this.Z > .3) this.Z = .3
+                    const Z = this.Z
+
+                    let day = [.7, .9, 1]
+                    let night = [0, 0, 0]
+
+                    let xPos = Math.floor(this.dist(hero.x) / 300)
+                    if (xPos) {
+                        if (this.ending) xPos = 4
+                        const seedDay = 999 + xPos * xPos
+                        const seedNight = xPos + xPos * 345
+
+                        day = [
+                            rnd(.3, 1, seedDay),
+                            rnd(.3, 1, seedDay * seedDay),
+                            rnd(.3, 1, seedDay * seedDay * 99)]
+
+                        night = [
+                            rnd(0, .3, seedNight * 401),
+                            rnd(0, .3, seedNight * seedNight),
+                            rnd(0, .3, seedNight * seedNight * 99)]
+                    }
+
+                    const goal = [
+                        lerp(night[0],day[0],Z),
+                        lerp(night[1],day[1],Z),
+                        lerp(night[2],day[2],Z)]
+                    if (!this.bg.length) this.bg = goal
+
+                    const TRANSITION = 2000
+                    this.bg[0] += (goal[0] - this.bg[0]) / TRANSITION * dt
+                    this.bg[1] += (goal[1] - this.bg[1]) / TRANSITION * dt
+                    this.bg[2] += (goal[2] - this.bg[2]) / TRANSITION * dt
+
+                    ctx.fillStyle = rgb(this.bg[0], this.bg[1], this.bg[2])
+                    ctx.fillRect(0, 0, cvs.width, cvs.height)
+
+                    // sun and moon
+                    const oft = -cam.x / 2
+                    const sunSize = .5 * this.scale
+                    const sunWhole = cvs.width * 1.5
+                    ctx.fillStyle = rgb(lerp(.4,1,Z), lerp(.4,1,Z), lerp(.4,.5,Z), .7)
+                    ctx.fillRect(
+                        (((oft * this.scale) % sunWhole) + sunWhole) % sunWhole - sunSize,
+                        cvs.height / 2 - (cam.y + 1.5 + Z * 3) * this.scale,
+                        sunSize, sunSize)
+
+                    ctx.imageSmoothingEnabled = false
+                    document.body.style.cursor = 'default'
+
+                    this.weapons = []
+                    this.botRequests = []
+
+                    cam.update(dt)
+
+                    // INRO TEXT
+                    if (cam.x < 30) {
+                        ctx.font = (this.scale * .5) + 'px startFont, sans-serif'
+                        const pos = real(10, -2)
+                        const pos2 = real(-3, 1)
+                        drawText('SQUIRT THE ROBOTS!', pos.x, pos.y, '#ddd')
+                        drawText('CONTROL WITH WASD', pos2.x, pos2.y, '#ddd')
+                        drawText('OR ARROW KEYS', pos2.x, pos2.y + this.scale / 2, '#ddd')
+                    }
+
+                    else if (cam.x < 100) {
+                        ctx.font = (this.scale * .5) + 'px startFont, sans-serif'
+                        const pos = real(46, -2)
+                        drawText('A POWER STATION!', pos.x, pos.y + this.scale / 2, '#ddd')
+                    }
+
+                    // CLOUDS
+                    for (let i = 0; i < 15; i ++) {
+                        const zIdx = rnd(.5, .8, i * i * 99)
+                        const posX = i - cam.x * zIdx
+                        const width = 3 * zIdx
+                        const whole = cvs.width / this.scale + width
+                        const x = ((posX % whole + whole) % whole) - width
+
+                        ctx.fillStyle = rgb(1*Z, 1*Z, 1*Z, .1 + rndDec(i * i) * .2)
+                        ctx.fillRect(
+                            x * this.scale,
+                            real(0, rnd(CEILING, GROUND - 2, i)).y,
+                            width * this.scale, 1.5 * this.scale * zIdx)
+                        if (Z < .5) {
+                            let alpha = 1-Z*2
+                            if (alpha > .5) alpha = .5
+                            ctx.fillStyle = rgb(1, 1, 1, alpha)
+                            ctx.fillRect(
+                                x * this.scale,
+                                real(0, rnd(CEILING, GROUND - 2, i * i)).y,
+                                zIdx / 8 * this.scale, zIdx / 8 * this.scale)
+                        }
+                    }
+
+                    // BOTS
+                    const spawn = .7
+                    const left = Math.floor(cam.x - cvs.width * spawn / this.scale)
+                    const right = Math.ceil(cam.x + cvs.width * spawn / this.scale)
+
+                    // Update
+                    for (let i = 0; i < this.bots.length; i ++) {
+                        const item = this.bots[i]
+                        if (on) item.update(dt)
+                        item.draw(dt)
+
+                        if ((!item.boss || item.eradicate) && (
+                            item.x <= left || item.x >= right) || item.life <= 0) {
+                            if (item.x <= left) hero.misses ++
+                            this.bots.splice(i, 1)
+                            i --
+                        }
+                    }
+
+                    // Placement
+                    if (on && this.oldRight < right && this.oldRight > left)
+                        for (let x = this.oldRight; x < right; x ++)
+                            this.makeBot(x)
+                    this.oldRight = right
+
+                    // Make spawn bots
+                    for (let i = 0; i < this.botRequests.length; i ++) {
+                        if (this.bots.length > 30) break
+
+                        const bot = this.botRequests[i]
+                        this.bots.unshift(new Bot(
+                            bot.x, bot.y, bot.type,
+                            item => {item.maxLife = hero.upg.damage.curr * 5}))
+                    }
+
+                    // PADS
+                    this.padOnScreen = false
+                    for (let x = left; x < right; x ++) {
+                        if (this.bangOnPad(x)) {
+                            this.padOnScreen = true
+
+                            const gray = .5
+                            const collided = hero.x + hero.w > x && hero.x < x + this.padSize
+                            if (collided) {
+                                ctx.fillStyle = rgb(lerp(gray,0,Z),lerp(gray*1.5,1,Z),lerp(gray,.5,Z),.5)
+                                hero.saveProgress()
+                            }
+                            else ctx.fillStyle = rgb(lerp(gray,0,Z),lerp(gray,1,Z),lerp(gray,0,Z),.3)
+                            fillRect(x, CEILING, this.padSize, GROUND - CEILING)
+
+                            ctx.fillStyle = rgb(.15, .15, .15)
+                            fillRect(x, GROUND, this.padSize, -this.padHeight)
+
+                            const draw = (X, w, h, yPos) => {
+                                const yOft = quad(.5 + Math.sin(this.time / 6 + Math.floor(yPos)) * .5) * .5
+                                fillRect(
+                                    X + x + this.padSize / 2 - w / 2,
+                                    GROUND - 2 + yPos + yOft, w, h)
+                            }
+
+                            const arrow = X => {
+                                draw(X, .24, .3, 0)
+                                draw(X, .52, .1, .3)
+                                draw(X, .38, .1, .4)
+                                draw(X, .24, .1, .5)
+                                draw(X, .1, .1, .6)
+                            }
+
+                            if (collided) {
+                                ctx.fillStyle = rgb(.4, 0, 0)
+                                arrow(.7)
+                                arrow(-.7)
+                            }
+                        }
+                    }
+                    
+                    // GROUND INFO
+                    const size = .8
+                    const x1 = Math.floor((cam.x - cvs.width / 2 / this.scale) / size)
+                    const x2 = Math.ceil((cam.x + cvs.width / 2 / this.scale) / size)
+                    const END = this.ending / size
+
+                    // Buildings
+                    if (END && x2 > END) {
+                        for (let x = x1; x < x2; x ++) {
+                            const s = rndDec(x) * .07
+                            if (x > END && s < .035) {
+                                const o = lerp(.2, .4, Z) - s
+                                const h = size * rnd(2, 10, x * x)
+
+                                ctx.fillStyle = rgb(o, o, o)
+                                fillRect(x * size, GROUND - h, size, h)
+
+                                for (let i = 0; i < 10; i ++) {
+                                    if (rndDec(x+i*i)<.5) continue
+                                    const inc = 2
+                                    const gap = .35
+                                    const wind = .2
+                                    ctx.fillStyle = rgb(1, 1, 0, .3)
+                                    fillRect(
+                                        x * size + .125 + (i % inc) * gap,
+                                        GROUND - h + .15 + Math.floor(i / inc) * gap,
+                                        wind, wind)
+                                }
+                            }
+                        }
+                    }
+
+                    // DEFEATED BOSS STONE
+                    if (hero.progress.length && hero.bossesDestroyed) {
+                        const x = hero.progress[0].x + 3
+                        if (cam.x < x + cvs.width / this.scale / 2) {
+                            this.fallRise += .01 * dt
+                            if (this.fallRise > 1) this.fallRise = 1
+                            const y = GROUND + 1.5 - quad(this.fallRise) * 1.5
+
+                            ctx.fillStyle = '#222'
+                            fillRect(x, y, -1, -1.5)
+                            ctx.fillStyle = '#bbb'
+                            ctx.textAlign = 'center'
+                            const pos = real(x - .5, y - 1.1)
+                            ctx.font = (this.scale / 4) + 'px font, sans-serif'
+                            ctx.fillText('BOSS', pos.x, pos.y)
+                            ctx.fillText('DEFE', pos.x, pos.y + this.scale / 4)
+                            ctx.fillText('ATED', pos.x, pos.y + this.scale / 2)
+                            ctx.textAlign = 'left'
+                        }
+                    }
+
+                    // HERO
+                    if (on) hero.update(dt)
+                    hero.draw(dt)
+
+                    // Mist
+                    if (this.mist) {
+                        this.mist += dt
+                        const slow = 1000
+                        if (this.mist > slow) this.mist = slow
+                        const alpha = this.mist / slow
+
+                        const add = .2
+                        const amt = 25
+
+                        for (let i = 0; i < amt; i ++) {
+                            const y = i * i * .01
+                            let a = (1 / i) * alpha
+                            if (!i) a = alpha
+
+                            ctx.fillStyle = rgb(1, 1, 1, a)
+                            const pos = real(0, GROUND - y - add)
+                            ctx.fillRect(0, pos.y, cvs.width, (y + add) * this.scale)
+                        }
+                    }
+
+                    // RED WARNING
+                    const hp = hero.smoothHealth / hero.upg.health.curr
+                    if (!hero.dead) {
+                        let a = .45 - hp
+                        if (a > .2) a = .2
+                        ctx.fillStyle = rgb(1, 0, 0, a * (.5 + Math.sin(this.time / 5) * .5))
+                        ctx.fillRect(0, 0, cvs.width, cvs.height)
+                    }
+
+                    // GROUND
+                    for (let x = x1; x < x2; x ++) {
+                        const s = rndDec(x) * .07
+                        const y = GROUND - rndDec(x * 2) * .1
+
+                        ctx.fillStyle = rgb(lerp(.1, .3, Z) + s, lerp(.1, .2, Z) + s, .1 + s)
+                        fillRect(x * size, y, size, 999)
+
+                        if (s < .03) {
+                            const bob = 1.5 + Math.sin(x * x + this.time / rnd(20, 90, x * x))
+
+                            const w = .05 + rndDec(x * 3) * .05
+                            const h = .05 + rndDec(x * 4) * .1
+                            ctx.fillStyle = rgb(s*Z, (.5 + s) * Z, s*Z)
+                            fillRect(x * size + size / 2 - w / 2, y, w, -h * bob)
+                        }
+
+                        if (s < .005) {
+                            const w = .8
+                            const h = .8
+                            const stalkW = .13
+                            const stalkH = rnd(.5, 1.5, x * 9)
+
+                            ctx.fillStyle = rgb(lerp(.1,.3,Z), lerp(.1,.2,Z), .1)
+                            fillRect(x * size + size / 2 - stalkW / 2, y, stalkW, -stalkH)
+
+                            ctx.fillStyle = rgb(0, lerp(.1,.4,Z), 0)
+                            fillRect(x * size + size / 2 - w / 2, y - stalkH, w, -h)
+                        }
+                    }
+
+                    if (on) {
+                        // PARTICLES
+                        for (let i = 0; i < this.particles.length; i ++) {
+                            const item = this.particles[i]
+                            if (item.text.length) {
+                                item.alpha -= dt * item.fade
+                                ctx.fillStyle = rgb(item.color[0],item.color[1],item.color[2],item.alpha)
+                                ctx.font = (this.scale * item.size) + 'px font'
+                                ctx.textAlign = 'center'
+                                fillText(item.text, item.x, item.y)
+                                ctx.textAlign = 'left'
+                            }
+
+                            else {
+                                ctx.fillStyle = item.color
+                                fillRect(item.x - item.size / 2, item.y - item.size / 2, item.size, item.size)
+                            }
+
+                            item.x += item.vx * dt
+                            item.y += item.vy * dt
+
+                            item.size -= item.shrink * dt
+                            if (item.size < 0 || item.alpha < 0) {
+                                this.particles.splice(i, 1)
+                                i --
+                            }
+                        }
+
+                        // ENEMY (AND WEAPON) COLLISION
+                        for (let i = 0; i < this.weapons.length; i ++) {
+                            const item = this.weapons[i]
+
+                            if (collide(item, hero) && !hero.dead) {
+                                cam.boom(.2, 10)
+                                hero.health -= item.damage
+                                hero.impact = 1
+                                zzfx(...[2,.1,99,,,.4,,,-2,-1,,,.04,.8,2,,.1,,,.22])
+                                if (item.parent) item.parent.life -= .2
+
+                                const dx = (hero.x + hero.w / 2) - (item.x + item.w / 2)
+                                const dy = (hero.y + hero.h / 2) - (item.y + item.h / 2)
+
+                                hero.vx += dx / 100 * dt
+                                hero.vy += dy / 100 * dt
+                            }
+                        }
+
+                        // ENEMY BULLET COLLISION
+                        for (let i = 0; i < this.bad.length; i ++) {
+                            const item = this.bad[i]
+                            item.update(dt)
+
+                            if (collide(item, hero) && !hero.dead) {
+                                hero.vx += item.vx / 5 * dt
+                                hero.vy += item.vy / 5 * dt
+                                hero.health -= item.damage
+                                item.hit()
+                                cam.boom(.1, 10)
+                            }
+
+                            if (item.x <= left || item.x >= right ||
+                                item.life <= 0 || item.y < CEILING || item.y > GROUND ||
+                                hero.shockWave) {
+                                this.bad.splice(i, 1)
+                                i --
+                            }
+                        }
+                    }
+
+                    // STATS
+                    hero.smoothMoney += (hero.money - hero.smoothMoney) / 7 * dt
+                    const pad = this.scale * .07
+                    const gap = this.scale * .15
+
+                    const width = this.scale * 3
+                    const height = this.scale * .4
+                    const spread = this.scale * .07
+
+                    ctx.fillStyle = '#111c'
+                    ctx.fillRect(gap, gap, width, height)
+                    ctx.fillRect(gap, gap + height + spread, width, height)
+                    ctx.fillRect(gap, gap + height * 2 + spread * 2, width, height)
+                    ctx.fillRect(gap, gap + height * 3 + spread * 3, width, height)
+
+                    const HP = hero.smoothHealth / hero.upg.health.curr
+                    const H = hero.impact
+                    const FLASH = .7 + Math.sin(this.time / 5) * .2
+                    ctx.fillStyle = rgb(lerp(FLASH,lerp(.2,.7,H),HP),lerp(.1,lerp(.6,.3,H),HP),lerp(.1,lerp(.33,.2,H),HP))
+
+                    ctx.fillRect(
+                        gap + pad, gap + pad,
+                        (width - pad * 2) * HP,
+                        height - pad * 2)
+
+                    ctx.fillStyle = '#35b'
+                    ctx.fillRect(
+                        gap + pad, gap + height + spread + pad,
+                        (width - pad * 2) * (1 - hero.regen),
+                        height - pad * 2)
+
+                    ctx.fillStyle = '#d90'
+                    ctx.font = (this.scale / 3) + 'px font'
+                    ctx.fillText(
+                        this.dist(hero.x) + 'm',
+                        gap + pad,
+                        gap + height * 2.6 + spread * 2 + pad)
+
+                    ctx.fillStyle = '#0d9'
+                    ctx.font = (this.scale / 3) + 'px font'
+                    ctx.fillText(
+                        CURRENCY + Math.ceil(hero.smoothMoney),
+                        gap + pad,
+                        gap + height * 3.8 + spread * 2 + pad)
+
+                    // SHOP
+                    const openSpeed = .03
+                    let yOft = (1 - this.shopTime * openSpeed)
+                    if (yOft < 0) yOft = 0
+                    if (yOft > 1) yOft = 1
+                    yOft = quad(yOft) * cvs.height
+
+                    if (this.shop) {
+                        ctx.font = (this.scale / 3) + 'px font'
+
+                        if (!this.cheapestScanned && this.cheapest.index >= 0) {
+                            this.shopIdx = this.cheapest.index
+                            this.cheapestScanned = true
+                        }
+
+                        let boxW = this.scale * 8
+                        const boxH = this.scale
+                        const boxGap = boxH * .2
+                        const boxRim = boxH * .07
+
+                        if (boxW > cvs.width)
+                            boxW = this.box * 15
+
+                        this.purchase -= .03 * dt
+                        this.shopSmoothIdx += (this.shopIdx - this.shopSmoothIdx) / 3 * dt
+                        let yScroll = this.shopSmoothIdx * (boxH + boxGap) - cvs.height / 2
+
+                        ctx.fillStyle = '#222'
+                        ctx.fillRect(0, yOft, cvs.width, cvs.height)
+
+                        const boxes = []
+                        const cheapest = {index: -1, quality: -1, price: -1}
+                        let idx = -1
+
+                        const exit = () => {
+                            idx ++
+
+                            boxes.push({desc: ['Press the right key to exit'], item: {reveal: 0}})
+                            const hover = this.shopIdx == idx
+
+                            const half = cvs.width / 2
+                            const boxX = half - boxW / 2
+                            const boxY = boxH + (idx - 1) * (boxH + boxGap) + yOft - yScroll
+
+                            if (boxY < yOft)
+                                return
+
+                            ctx.fillStyle = '#0005'
+                            ctx.fillRect(boxX + boxGap / 2, boxY + boxGap / 2, boxW, boxH)
+                            ctx.fillStyle = '#141'
+                            if (hover) ctx.fillStyle = '#272'
+                            ctx.fillRect(boxX, boxY, boxW, boxH)
+                            ctx.fillStyle = '#151'
+                            if (hover) ctx.fillStyle = '#282'
+                            ctx.fillRect(boxX, boxY, boxW, boxH / 2)
+                            ctx.fillStyle = '#474'
+                            ctx.fillRect(boxX, boxY, boxW, boxRim)
+                            ctx.fillRect(boxX, boxY, boxRim, boxH)
+
+                            const arrow = (x, y) => {
+                                const w = boxW * .045
+                                const h = boxH * .2
+                                const normX = boxX + boxW / 2 + x * this.scale
+                                const normY = boxY + (y + .03) * this.scale + boxH / 2
+                                const res = 4
+
+                                ctx.fillRect(normX, normY - h / 2, w, h)
+
+                                for (let i = 0; i < res; i ++) {
+                                    const segw = this.scale * .25 / res
+                                    const segh = (res - i) * boxH * .4 / res
+                                    ctx.fillRect(
+                                        normX + w + i * segw,
+                                        normY - segh / 2, segw, segh)
+                                }
+                            }
+
+                            if (hover) {
+                                ctx.fillStyle = '#010'
+                                arrow(2.9,0)
+                                ctx.fillStyle = '#7f7'
+                                arrow(2.9,-.05)
+                            }
+
+                            ctx.textAlign = 'center'
+                            drawText('EXIT POWER STATION', boxX + boxW / 2, boxY + boxH * .65)
+                            ctx.textAlign = 'left'
+                        }
+
+                        const box = (text, key, desc) => {
+                            const item = hero.upg[key]
+                            if (hero.moneyMax < item.hide) return
+
+                            idx ++
+                            let afford = hero.money - item.price >= 0
+                            const hover = this.shopIdx == idx
+                            const reveal = hero.moneyMax >= item.reveal
+                            const maxUpg = item.curr >= item.max
+                            if (!reveal || maxUpg) afford = false
+
+                            if (afford &&
+                                ((item.quality > cheapest.quality) || 
+                                (item.quality == cheapest.quality && item.price < cheapest.price))) {
+
+                                cheapest.index = idx
+                                cheapest.quality = item.quality
+                                cheapest.price = item.price
+                            }
+
+                            const recommend = idx == this.cheapest.index
+
+                            const half = cvs.width / 2
+                            let boxX = half - boxW / 2
+                            const boxY = boxH + (idx - 1) * (boxH + boxGap) + yOft - yScroll
+
+                            let purchase = Math.sin((1 - this.purchase) * 2 * Math.PI)
+                            if (purchase < 0) purchase = 0
+                            else if (purchase > 1) purchase = 1
+                            if (hover && this.purchase > 0) {
+                                if (afford) boxX += quad(purchase) * this.scale * .5
+                                else boxX += random(-.05, .05) * this.scale
+                            }
+
+                            boxes.push({desc, item})
+
+                            if (boxY < yOft)
+                                return
+
+                            ctx.fillStyle = '#0005'
+                            ctx.fillRect(boxX + boxGap / 2, boxY + boxGap / 2, boxW, boxH)
+                            ctx.fillStyle = '#210'
+                            if (hover) ctx.fillStyle = '#543'
+                            ctx.fillRect(boxX, boxY, boxW, boxH)
+                            ctx.fillStyle = '#321'
+                            if (hover) ctx.fillStyle = '#654'
+                            ctx.fillRect(boxX, boxY, boxW, boxH / 2)
+                            ctx.fillStyle = '#765'
+                            ctx.fillRect(boxX, boxY, boxW, boxRim)
+                            ctx.fillRect(boxX, boxY, boxRim, boxH)
+
+                            if (hover && this.purchase) {
+                                ctx.fillStyle = rgb(1, .85, .7, this.purchase / 3)
+                                ctx.fillRect(boxX, boxY, boxW, boxH)
+                            }
+
+                            const arrow = (x, y) => {
+                                const w = boxW * .045
+                                const h = boxH * .2
+                                const normX = boxX + boxW / 2 + x * this.scale
+                                const normY = boxY + (y + .03) * this.scale + boxH / 2
+                                const res = 4
+
+                                ctx.fillRect(normX, normY - h / 2, w, h)
+
+                                for (let i = 0; i < res; i ++) {
+                                    const segw = this.scale * .25 / res
+                                    const segh = (res - i) * boxH * .4 / res
+                                    ctx.fillRect(
+                                        normX + w + i * segw,
+                                        normY - segh / 2, segw, segh)
+                                }
+                            }
+
+                            const shift = afford && hover && this.shopTime % 30 < 15
+                            const jump = .075
+
+                            if (afford) {
+                                ctx.fillStyle = '#100'
+                                if (hover) ctx.fillStyle = '#210'
+                                if (shift) arrow(jump,0)
+                                else arrow(0,0)
+
+                                ctx.fillStyle = '#432'
+                                if (hover) ctx.fillStyle = '#987'
+
+                                if (shift) arrow(jump,-.05)
+                                else arrow(0,-.05)
+
+                                if (recommend) {
+                                    const oft = this.scale * .03
+                                    const size = boxH * .6
+                                    ctx.fillStyle = '#210'
+                                    ctx.fillRect(boxX + boxW * .96 + oft, boxY + boxH * .73 + oft, -size, boxH * .06)
+                                    ctx.fillStyle = '#050'
+                                    if (hover) ctx.fillStyle = '#0b0'
+                                    ctx.fillRect(boxX + boxW * .96, boxY + boxH * .73, -size, boxH * .06)
+                                }
+                            }
+
+                            let col = '#fff'
+                            if (!afford) col = '#f55'
+
+                            if (!reveal) drawText('???', boxX + boxH / 3, boxY + boxH * .65, col)
+                            else drawText(text + Math.ceil(item.curr), boxX + boxH / 3, boxY + boxH * .65, col)
+
+                            const price = Math.ceil(item.price)
+                            ctx.textAlign = 'right'
+                            if (maxUpg) {
+                                if (!afford) col = '#5f5'
+                                item.curr = item.max
+                                drawText('MAX', boxX + boxW * .96, boxY + boxH * .65, col)
+                            }
+                            else drawText(
+                                CURRENCY + price,
+                                boxX + boxW * .96,
+                                boxY + boxH * .65, col)
+
+                            ctx.textAlign = 'left'
+                        }
+
+                        exit()
+                        box('REGEN: ', 'regen', ['How fast the copter can squirt'])
+                        box('SPEED: ', 'force', ['Particle movement speed'])
+                        box('HEAL: ', 'recover', ['Self-heal speed'])
+                        box('HEALTH: ', 'health', ['Max body strength'])
+                        box('BACK UP: ', 'backup', ['Double damage if copter', 'has < 50% health'])
+                        box('SHOCKWAVE: ', 'shockwave', ['Blast robots if copter', 'has < 20% health'])
+                        box('KNOCKBACK: ', 'knockback', ['Knocks robots away on impact'])
+                        box('MOVEMENT: ', 'move', ['Copter movement speed'])
+                        box('ARTILLERY: ', 'guns', ['Amount of particles', 'in every squirt'])
+                        box('DAMAGE: ', 'damage', ['Particle damage'])
+                        box('FREEZE: ', 'freeze', ['40% chance to freeze robots'])
+                        box('EXPLODE: ', 'explode', ['Particles multiply after', 'they squirt a robot'])
+                        box('BUDJET: ', 'cheap', ['All power-ups are 50% cheaper'])
+                        box('EXTRA LIFE: ', 'life', ['Instantly resurrect your', 'copter after death'])
+                        box('NPC: ', 'companion', ['A loyal friend', 'for times of need'])
+                        exit()
+
+                        this.cheapest = cheapest
+
+                        // DESCRIPTION BOX
+                        ctx.fillStyle = '#321'
+                        ctx.fillRect(0, yOft, cvs.width, this.scale)
+                        ctx.fillStyle = '#765'
+                        ctx.fillRect(0, yOft + this.scale, cvs.width, this.scale * .05)
+
+                        // DESCRIPTION STATS
+                        let slideIn = (this.shopTime - 10) / 50
+                        if (slideIn < 0) slideIn = 0
+                        if (slideIn > 1) slideIn = 1
+                        const slide = 3
+                        const textX = boxGap + quad(slideIn) * this.scale * slide - (this.scale * slide - 1)
+
+                        ctx.font = (this.scale / 3.5) + 'px font'
+                        ctx.fillStyle = '#210'
+                        ctx.fillRect(textX, yOft + this.scale / 4, this.scale * 2, this.scale / 2)
+                        ctx.fillStyle = '#7e7'
+                        ctx.fillText(CURRENCY + Math.ceil(hero.smoothMoney), textX + boxGap, yOft + boxGap * 3)
+
+                        // DESCRIPTION
+                        const item = boxes[this.shopIdx].item
+                        ctx.font = (this.scale / 3) + 'px font'
+                        if (this.scale * 7 > cvs.width)
+                            ctx.font = (this.box * .6) + 'px font'
+
+                        ctx.fillStyle = '#fff'
+                        ctx.textAlign = 'center'
+                        if (item && hero.moneyMax >= item.reveal) {
+                            const desc = boxes[this.shopIdx].desc
+
+                            for (let i = 0; i < desc.length; i ++) {
+                                const amt = Math.sin(this.shopTime / 7 + Math.PI) * .8
+                                const bob = quad(.5 + Math.sin(this.shopTime / 7 + i * 3) * .5) * this.scale * .03
+
+                                drawText(
+                                    desc[i], cvs.width / 2,
+                                    yOft + this.scale * .85 + i * this.scale * .4 - this.scale * .2 * desc.length + bob,
+                                    rgb(1 + amt, 1, 1 + amt), '#000')
+                            }
+
+                            const LINEW = this.scale * 4
+                            const LINEH = this.scale * .05
+                            const GAP = this.scale * .03
+
+                            ctx.fillStyle = '#000'
+                            ctx.fillRect(
+                                cvs.width / 2 - LINEW / 2 + GAP,
+                                yOft + this.scale * .07 + GAP,
+                                LINEW, LINEH)
+
+                            ctx.fillStyle = '#555'
+                            ctx.fillRect(
+                                cvs.width / 2 - LINEW / 2,
+                                yOft + this.scale * .07,
+                                LINEW, LINEH)
+                        }
+                        else drawText('???', cvs.width / 2, yOft + this.scale * .65, '#fff', '#210')
+                        ctx.textAlign = 'left'
+
+                        // KEY DETECTION
+                        if (key.right && !this.shopClose) {
+                            key.right = false
+
+                            if (item.price) {
+                                this.purchase = 1
+
+                                if (Math.ceil(hero.money) - Math.ceil(item.price) >= 0 &&
+                                    hero.moneyMax > item.reveal && (
+                                    item.max && item.curr < item.max ||
+                                    !item.max)) {
+
+                                    hero.money -= item.price
+                                    item.curr += item.inc
+                                    item.price *= item.priceInc
+                                    if (hero.money < 0) hero.money = 0
+                                    if (item.command) item.command()
+
+                                    zzfx(...[.1,0,542,.01,,.26,1,,,.1,,,,,,,,.27,.03])
+                                }
+
+                                else zzfx(...[.1,,100,.01,.03,.17,1,2.79,,-1,,,,1.4,,.5,,.45,.03])
+                            }
+                            else {
+                                this.shopClose = true
+                                this.shopTime = 1 / openSpeed
+                                hero.health = hero.upg.health.curr
+                                zzfx(...[2,.1,50,.1,.11,.2,,1.3,,-.12,,,,.5,,,,.9,.06])
+                            }
+                        }
+
+                        if (key.up && !this.shopClose) {
+                            if (this.shopIdx <= 1) this.shopIdx = 1
+                            this.shopIdx --
+                            key.up = false
+                        }
+                        if (key.down && !this.shopClose) {
+                            this.shopIdx ++
+                            if (this.shopIdx > idx) this.shopIdx = idx
+                            key.down = false
+                        }
+
+                        if (this.shopTime < 0) {
+                            this.shopClose = false
+                            this.shopTime = 0
+                            this.shop = false
+                            hero.shopped = true
+                            this.shopSmoothIdx = 1
+                            this.shopIdx = 1
+                            this.cheapestScanned = false
+                            this.cheapest = {index: -1, quality: -1, price: -1}
+                        }
+                    }
+
+                    // QUESTS
+                    const speed = .002
+                    if (on) this.questTime += speed * dt
+
+                    let time3 = this.time * .01 - .3
+                    if (time3 > 1) time3 = 1
+                    let val = quad(time3) * 3 - 2
+                    if (time3 < .5) val = 0
+
+                    ctx.fillStyle = '#111c'
+                    const progressW = this.scale * 3.5
+                    let progressH = this.scale * .5
+
+                    if (this.ending) {
+                        let t = this.questTime * 80
+                        if (t > 1) t = 1
+                        progressH += quad(t) * this.scale * .4
+                    }
+
+                    // Progress box
+                    ctx.fillRect(
+                        cvs.width / 2 - progressW / 2,
+                        yOft - cvs.height + val * this.scale - this.scale,
+                        progressW, progressH)
+
+                    // Progress text
+                    let col = '#fff'
+                    let questProgressText = hero.sum + '-' + this.questNum
+
+                    if (this.questActive && time3 >= 1 && this.quest > 1) {
+                        questProgressText =
+                            CURRENCY + Math.floor(this.questReward) + ' REWARD!'
+
+                        col = rgb(1, .6, .3)
+                        if (this.time % 30 < 15) col = '#fff'
+                    }
+
+                    ctx.textAlign = 'center'
+                    ctx.font = (this.scale / 3) + 'px font'
+
+                    if (this.ending) {
+                        drawText('Thanks', cvs.width / 2,
+                            yOft - cvs.height + this.scale * .35 + val * this.scale - this.scale,
+                            col, '#000')
+
+                        drawText('for playing!', cvs.width / 2,
+                            yOft - cvs.height + this.scale * .7 + val * this.scale - this.scale,
+                            col, '#000')
+                    }
+
+                    else drawText(
+                        questProgressText,
+                        cvs.width / 2,
+                        yOft - cvs.height + this.scale * .35 + val * this.scale - this.scale,
+                        col, '#000')
+                    ctx.textAlign = 'left'
+
+                    this.questSpring.goal = 0
+                    if (this.questActive && !this.start) {
+                        let time = this.questTime
+                        if (time > 1.5 && !this.ending) this.questActive = false
+                        if (time < 1.3) this.questSpring.goal = 1
+
+                        const questW = this.scale * 4.5
+                        const questH = this.scale * 1.5
+                        let questGap = this.scale * .2
+                        if (cvs.width < cvs.height) questGap += progressH
+                        const questY = yOft + (this.questSpring.y - 1) * (questH + questGap) + questGap - cvs.height
+
+                        ctx.fillStyle = '#222'
+                        ctx.fillRect(cvs.width, questY, -questW, questH)
+
+                        const mgn = this.scale * .1
+                        ctx.lineWidth = this.scale * .05
+                        ctx.strokeStyle = '#c94'
+                        ctx.strokeRect(
+                            cvs.width - mgn,
+                            questY + mgn,
+                            -questW + mgn * 2,
+                            questH - mgn * 2)
+
+                        ctx.textAlign = 'center'
+                        ctx.font = (this.scale / 2) + 'px font'
+
+                        if (this.ending) drawText(
+                            'COMPLETED',
+                            cvs.width - questW / 2,
+                            questY + questH * .45,
+                            '#fff', '#840')
+
+                        else drawText(
+                            'QUEST ' + this.quest + '-' + (Math.ceil(this.quest / 10) * 10),
+                            cvs.width - questW / 2,
+                            questY + questH * .45,
+                            '#fff', '#840')
+                        ctx.font = (this.scale / 3.5) + 'px font'
+
+                        if (this.boss) {
+                            let color = '#fff'
+                            if (this.time % 30 < 15) color = '#f00'
+                            drawText(
+                                'SQUIRT THE BOSS!!!',
+                                cvs.width - questW / 2,
+                                questY + questH * .75,
+                                color, '#000')
+                        }
+
+                        else if (this.ending) {
+                            drawText('in ' + this.playTime + ' minutes',
+                            cvs.width - questW / 2, questY + questH * .75,
+                            '#fff', '#000')
+
+                            this.questSpring.goal = 1
+                        }
+
+                        else drawText(
+                            'SQUIRT ' + this.questNum + ' ROBOTS!',
+                            cvs.width - questW / 2, questY + questH * .75,
+                            '#fff', '#000')
+
+                        ctx.textAlign = 'left'
+                    }
+
+                    this.questSpring.v += (this.questSpring.goal - this.questSpring.y) / 20 * dt
+                    this.questSpring.v *= Math.pow(.8, dt)
+                    if (this.questSpring.v > 0 && !this.questSpring.goal) this.questSpring.v = 0
+                    this.questSpring.y += this.questSpring.v * dt
+
+                    if (hero.money > hero.moneyMax)
+                        hero.moneyMax = hero.money
+
+                    if (!this.ending) this.playTime = Math.ceil(performance.now() / 60000)
+                    this.overlay(dt,yOft)
+                }
+            }
+
+            function press(e, bool) {
+                if (e.repeat) return
+
+                key.press = bool
+                if (e.code == 'ArrowUp' || e.code == 'KeyW' || e.code == 'KeyZ') key.up = bool
+                if (e.code == 'ArrowLeft' || e.code == 'KeyA' || e.code == 'KeyQ') key.left = bool
+                if (e.code == 'ArrowDown' || e.code == 'KeyS') key.down = bool
+                if (e.code == 'ArrowRight' || e.code == 'KeyD') key.right = bool
+                if (e.code == 'Space' || e.code == 'Enter') {
+                    key.right = bool
+                    key.confirm = bool
+                }
+            }
+
+            const vol=1
+            let atx=0
+            // Thanks to ZZFX by Frank Force <3
+            const zzfx=(p=1,k=.05,b=220,e=0,r=0,t=.1,q=0,D=1,u=0,y=0,v=0,z=0,l=0,E=0,A=0,F=0,c=0,w=1,m=
+            0,B=0,M=Math,R=44100,d=2*M.PI,G=u*=500*d/R/R,C=b*=(1-k+2*k*M.random(k=[]))*d/R,g
+            =0,H=0,a=0,n=1,I=0,J=0,f=0,x,h)=>{if(!atx)return;e=R*e+9;m*=R;r*=R;t*=R;c*=R;y*=500*d/R**3;A*=d
+            /R;v*=d/R;z*=R;l=R*l|0;for(h=e+m+r+t+c|0;a<h;k[a++]=f)++J%(100*F|0)||(f=q?1<q?2<
+            q?3<q?M.sin((g%d)**3):M.max(M.min(M.tan(g),1),-1):1-(2*g/d%2+2)%2:1-4*M.abs(M.
+            round(g/d)-g/d):M.sin(g),f=(l?1-B+B*M.sin(d*a/l):1)*(0<f?1:-1)*M.abs(f)**D*vol
+            *p*(a<e?a/e:a<e+m?1-(a-e)/m*(1-w):a<e+m+r?w:a<h-c?(h-a-c)/t*w:0),f=c?f/2+(c>a?0:
+            (a<h-c?1:(h-a)/c)*k[a-c|0]/2):f),x=(b+=u+=y)*M.cos(A*H++),g+=x-x*E*(1-1E9*(M.sin
+            (a)+1)%2),n&&++n>z&&(b+=v,C+=v,n=0),!l||++I%l||(b=C,u=G,n=n||1);p=atx.
+            createBuffer(1,h,R);p.getChannelData(0).set(k);b=atx.createBufferSource();b.
+            buffer=p;b.connect(atx.destination);b.start()}
+
+            function playMusic() {
+                atx = new (AudioContext || webkitAudioContext)()
+
+                let beats = 4
+                const noteLength = 190
+                const startDelay = 200
+                const scale = [261.63, 293.66, 311.13, 349.23, 392, 415.305, 466.16]
+
+                const base = [0, 2, 1, 6]
+                const oft = 1.1
+
+                let progress = 0
+                let currentMelody = []
+
+                const generateMelody = () => {
+                    if (!(progress % 64)) {
+                        const choice = randomInt(0, 3)
+                        if (!choice) beats = 2
+                        else if (choice == 1) beats = 4
+                        else if (choice == 2) beats = 8
+                    }
+
+                    // Reset melody
+                    currentMelody = []
+
+                    // Make melody snippet
+                    const snippet = []
+                    for (let i = 0; i < beats - 1; i ++) {
+                        let rand = randomInt(0, scale.length)
+                        if (rand == 3) rand ++
+                        if (rand == 1) rand ++
+                        let pass = scale[rand] / 4
+                        snippet.push(pass * oft)
+                    }
+
+                    // Repeat snippet with changes in the first note
+                    for (let i = 0; i < base.length; i ++) {
+                        let pass = scale[base[i]]
+                        if (base[i] >= scale.length - 1)
+                            pass /= 2
+                        currentMelody.push(pass * oft / 2)
+
+                        for (let j = 0; j < snippet.length; j ++)
+                            currentMelody.push(snippet[j])
+                    }
+                }
+
+                const playNote = index => {
+                    if (!(progress % currentMelody.length)) generateMelody()
+                    progress ++
+
+                    if (index >= currentMelody.length)
+                        index = 0
+
+                    const freq = currentMelody[index]
+                    let curve = 1 + (.5 + (game.Z * 40)) * music.shopSmooth
+                    let volume = .4
+                    let noise = quad(.4 + Math.sin(game.time / 1000) * .4)
+                    const delay = rndDec(game.dist(hero.x / 300)) * .4
+
+                    music.shopSmooth += .05
+                    if (music.shopSmooth > 1)
+                        music.shopSmooth = 1
+
+                    if (game.shop) {
+                        noise = .1
+                        volume = .8
+                        curve = 1
+                        music.shopSmooth = 0
+                    }
+                    zzfx(...[volume,0,freq,.01,.2,.26,,curve,,,,,,noise,,,delay,.21,.08,.2])
+                    setTimeout(() => playNote(index + 1), noteLength)
+                }
+
+                setTimeout(() => playNote(0), startDelay)
+            }
+
+            function resize() {
+                cvs.width = innerWidth * devicePixelRatio
+                cvs.height = innerHeight * devicePixelRatio + 1
+
+                game.resize()
+            }
+
+            function update() {
+                let dt = (performance.now() - game.oldPerf) / 16
+                game.oldPerf = performance.now()
+                if (dt > 1) dt = 1
+
+                game.update(dt)
+
+                // MOBILE CONTROL PAD
+                if (MOBILE) {
+                    PADRAD = game.box * 3
+                    x1PAD = game.box + PADRAD
+                    x2PAD = cvs.width - game.box - PADRAD
+                    yPAD = cvs.height - game.box - PADRAD
+
+                    ctx.fillStyle = '#dfe3'
+                    if (key.right) ctx.fillStyle = '#dfe4'
+                    ctx.beginPath()
+                    ctx.arc(x1PAD, yPAD, PADRAD, -Math.PI / 2, Math.PI / 2)
+                    ctx.fill()
+                    ctx.fillStyle = '#dfe6'
+                    if (key.left) ctx.fillStyle = '#dfe5'
+                    ctx.beginPath()
+                    ctx.arc(x1PAD, yPAD, PADRAD, Math.PI / 2, -Math.PI / 2)
+                    ctx.fill()
+
+                    ctx.fillStyle = '#dfe3'
+                    if (key.down) ctx.fillStyle = '#dfe4'
+                    ctx.beginPath()
+                    ctx.arc(x2PAD, yPAD, PADRAD, 0, Math.PI)
+                    ctx.fill()
+                    ctx.fillStyle = '#dfe6'
+                    if (key.up) ctx.fillStyle = '#dfe5'
+                    ctx.beginPath()
+                    ctx.arc(x2PAD, yPAD, PADRAD, Math.PI, 0)
+                    ctx.fill()
+                }
+
+                requestAnimationFrame(update)
+            }
+
+            const ctx = cvs.getContext('2d')
+            const game = new Game()
+            const hero = new Hero()
+            const cam = new Camera()
+            const music = {
+                started: false,
+                shopSmooth: 0,
+                switchedOn: true
+            }
+            const key = {
+                up: 0,
+                down: 0,
+                left: 0,
+                right: 0,
+                press: 0,
+                confirm: 0
+            }
+            const mouse = {
+                x: 0,
+                y: 0,
+                w: 0,
+                h: 0,
+                move: false,
+                press: false
+            }
+
+            let PADRAD = 0
+            let x1PAD = 0
+            let x2PAD = 0
+            let yPAD = 0
+            const MOBILE = 'ontouchstart' in window
+
+            addEventListener('keydown', e => press(e, 1))
+            addEventListener('keyup', e => press(e, 0))
+            addEventListener('resize', resize)
+
+            // MOBILE AND MOUSE
+            function moveMouse(x, y) {
+                mouse.x = x * devicePixelRatio
+                mouse.y = y * devicePixelRatio
+                mouse.move = true
+            }
+
+            function touchMove(e) {
+                if (e.originalEvent) e = e.originalEvent
+                const touch = e.touches[0] || e.changedTouches[0]
+                moveMouse(touch.pageX, touch.pageY)
+            }
+
+            function cancelTouches(e) {
+                for (let i = 0; i < e.changedTouches.length; i ++) {
+                    const release = key => {
+                        if (key && key.identifier == e.changedTouches[i].identifier)
+                            return false
+                        return key
+                    }
+
+                    key.up = release(key.up)
+                    key.down = release(key.down)
+                    key.left = release(key.left)
+                    key.right = release(key.right)
+                }
+            }
+
+            addEventListener('touchstart', e => {
+                e.preventDefault()
+
+                mouse.press = true
+                touchMove(e)
+
+                for (let i = 0; i < e.changedTouches.length; i ++) {
+                    const touch = e.changedTouches[i]
+                    const m = {
+                        x: touch.clientX * devicePixelRatio,
+                        y: touch.clientY * devicePixelRatio,
+                        w: 0, h: 0}
+
+                    if (collide(m, {x:x1PAD-PADRAD,y:yPAD-PADRAD,w:PADRAD,h:PADRAD*2}))
+                        key.left = touch
+                    if (collide(m, {x:x1PAD,y:yPAD-PADRAD,w:PADRAD,h:PADRAD*2}))
+                        key.right = touch
+                    if (collide(m, {x:x2PAD-PADRAD,y:yPAD-PADRAD,w:PADRAD*2,h:PADRAD}))
+                        key.up = touch
+                    if (collide(m, {x:x2PAD-PADRAD,y:yPAD,w:PADRAD*2,h:PADRAD}))
+                        key.down = touch
+                }
+            })
+            addEventListener('touchend', e => {
+                e.preventDefault()
+                mouse.press = false
+                cancelTouches(e)
+            })
+            addEventListener('touchleave', e => {
+                e.preventDefault()
+                mouse.press = false
+                cancelTouches(e)
+            })
+            addEventListener('mousedown', () => mouse.press = true)
+            addEventListener('mouseup', () => mouse.press = false)
+            addEventListener('mousemove', e => moveMouse(e.clientX, e.clientY))
+            addEventListener('touchmove', e => touchMove(e))
+
+            resize()
+            update()
+        </script>
+    </body>
+</html>
