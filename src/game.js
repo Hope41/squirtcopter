@@ -534,7 +534,7 @@ class Game {
         const oft = -cam.x / 2
         const sunSize = .5 * this.scale
         const sunWhole = cvs.width * 1.5
-        ctx.fillStyle = rgb(lerp(.4,1,Z), lerp(.4,1,Z), lerp(.4,.5,Z), .7)
+        ctx.fillStyle = rgb(lerp(.4,1,Z), lerp(.4,1,Z), lerp(.4,.5,Z), .4)
         ctx.fillRect(
             (((oft * this.scale) % sunWhole) + sunWhole) % sunWhole - sunSize,
             cvs.height / 2 - (cam.y + 1.5 + Z * 3) * this.scale,
