@@ -2,7 +2,8 @@
     <head>
         <meta charset = utf-8>
         <meta name = viewport content = 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
-        <title>SQUIRTCOPTER</title>
+        <link rel = icon type = image/x-icon href = logo.ico>
+        <title>Squirtcopter</title>
         <style>
             @font-face {
                 font-family: font;
@@ -2274,7 +2275,7 @@
                     const oft = -cam.x / 2
                     const sunSize = .5 * this.scale
                     const sunWhole = cvs.width * 1.5
-                    ctx.fillStyle = rgb(lerp(.4,1,Z), lerp(.4,1,Z), lerp(.4,.5,Z), .7)
+                    ctx.fillStyle = rgb(lerp(.4,1,Z), lerp(.4,1,Z), lerp(.4,.5,Z), .4)
                     ctx.fillRect(
                         (((oft * this.scale) % sunWhole) + sunWhole) % sunWhole - sunSize,
                         cvs.height / 2 - (cam.y + 1.5 + Z * 3) * this.scale,
