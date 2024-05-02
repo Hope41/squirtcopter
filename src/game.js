@@ -1266,7 +1266,7 @@ class Game {
 
         // Progress text
         let col = '#fff'
-        let questProgressText = hero.sum + '-' + this.questNum
+        let questProgressText = hero.sum + '/' + this.questNum
 
         if (this.questActive && time3 >= 1 && this.quest > 1) {
             questProgressText =
@@ -1330,7 +1330,7 @@ class Game {
                 '#fff', '#840')
 
             else drawText(
-                'QUEST ' + this.quest + '-' + (Math.ceil(this.quest / 10) * 10),
+                'QUEST ' + this.quest + '/' + (Math.ceil(this.quest / 10) * 10),
                 cvs.width - questW / 2,
                 questY + questH * .45,
                 '#fff', '#840')
